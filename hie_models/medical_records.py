@@ -3,7 +3,7 @@
 Contains medicalrecords class, blueprint for creating a medicalrecords
 """
 from hie_models.basemodel import Base, BaseModel
-from sqlalchemy import Column, String, Date, Boolean, ForeignKey, JSON
+from sqlalchemy import Column, String, ForeignKey, JSON
 from sqlalchemy.orm import relationship
 
 
@@ -45,7 +45,7 @@ class MedicalRecords(BaseModel, Base):
 
     def __init__(self, *args, **kwargs):
         """
-        Initializes a new instance of the Doctor class.
+        Initializes a new instance of the MedicalRecords class.
 
         Parameters:
             *args: Variable length argument list.

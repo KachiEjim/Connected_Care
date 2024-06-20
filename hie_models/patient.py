@@ -9,26 +9,27 @@ from sqlalchemy import Column, String, Date
 
 class Patient(BaseModel, Base):
     """
-    The Patient class represents a patient entity in the system.
+    Class representing a patient.
 
     Attributes:
-        Username (str): The username of the patient.
-        _password (str): The hashed password of the patient.
-        FirstName (str): The first name of the patient.
-        LastName (str): The last name of the patient.
-        OtherName (str): The other name of the patient.
-        Email (str): The email address of the patient.
-        DateOfBirth (Date): The date of birth of the patient.
-        PhoneNumber (str): The phone number of the patient.
-        AddressLine1 (str): The first line of the address of the patient.
-        AddressLine2 (str): The second line of the address of the patient.
-        City (str): The city of the patient.
-        State (str): The state of the patient.
-        ZipCode (str): The zip code of the patient.
-        Country (str): The country of the patient.
-        EmergencyContactName (str): The name of the emergency contact person for the patient.
-        EmergencyContactPhone (str): The phone number of the emergency contact person.
-        Next_of_kin (str): The next of kin of the patient.
+        _password (str): The password of the patient.
+        firstName (str): The first name of the patient.
+        lastName (str): The last name of the patient.
+        otherName (str): The other name of the patient.
+        email (str): The email address of the patient.
+        dateOfBirth (Date): The date of birth of the patient.
+        phoneNumber (str): The phone number of the patient.
+        address (str): The address of the patient.
+        city (str): The city of the patient.
+        state (str): The state of the patient.
+        zipCode (str): The zip code of the patient.
+        country (str): The country of the patient.
+        emergencyContactName (str): The name of the emergency contact for the patient.
+        emergencyContactPhone (str): The phone number of the emergency contact for the patient.
+        next_of_kin (str): The next of kin for the patient.
+
+    Methods:
+        __init__: Initializes a new instance of the Patient class.
     """
 
     from uuid import uuid4
