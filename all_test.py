@@ -1,5 +1,5 @@
 from hie_models.hie_db.db_storage import DBStorage
-from hie_models.patient import Patient
+from Connected_Care.hie_models.patient_fhir import Patient
 from hie_models.doctor import Doctor, patients_doctors
 from hie_models.hospital import Hospital
 from hie_models.consent import Consents

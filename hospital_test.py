@@ -3,7 +3,7 @@ from hie_models.basemodel import BaseModel
 from hie_models.doctor import Doctor
 from hie_models.hie_db.db_storage import DBStorage
 from hie_models.hospital import Hospital
-from hie_models.patient import Patient  # Import the Patients class
+from Connected_Care.hie_models.patient_fhir import Patient  # Import the Patients class
 
 """
 # Test BaseModel functionality

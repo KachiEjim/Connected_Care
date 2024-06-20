@@ -5,7 +5,7 @@ Contains the class DBStorage
 """
 from hie_models.basemodel import BaseModel, Base
 from hie_models.hospital import Hospital
-from hie_models.patient import Patient
+from Connected_Care.hie_models.patient_fhir import Patient
 from hie_models.doctor import Doctor
 from hie_models.consent import Consent
 from hie_models.medical_records import MedicalRecords
