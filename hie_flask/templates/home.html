@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contected Care</title>
+    <link rel="stylesheet" href="../static/styles/home.css">
+</head>
+<body>
+    <!--header section-->
+    <header>
+        <div class="logo">
+            <h2>HIE</h2>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <!--Form-->
+    <h1>Welcome to Connected Care</h1>
+    
+        
+        <form action="">    
+            <div class="form-container">
+                <h3>Sign-up</h3>
+                <label for="username"> Enter Your name </label>
+                <input type="text" name="username" id="name" 
+                placeholder="Enter Your name"> 
+                <span id="name-error"></span>
+            </div>
+           
+            <div class="form-container">
+                <label for="email"> Enter Your Email  </label>
+                <input type="email" name="email" id="email" placeholder=" Enter Your Email"> 
+                <span id="email-error"></span>
+            </div>
+           
+            <div class="form-container">
+                <label for="password"> Enter  Password </label>
+                <input type="password" name="password" id="password" placeholder="Enter  Password ">
+                <span id="password-error"></span>
+            </div>
+            <div class="btn">
+                <a href="#">
+                 <button type="submit" id="submit-btn">Submit</button>
+                </a> 
+                 </div>
+        </form>
+    
+   
+    <script src="../scripts/home.js"></script>
+</body>
+</html>
