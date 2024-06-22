@@ -61,5 +61,11 @@ class Patient(BaseModel, Base):
 
         Returns:
             None
+
+        Behavior:
+            - If kwargs are provided, set the attributes based on the key-value pairs.
+            - If 'dateOfBirth' is provided as a string, convert it to a datetime object using the '%Y-%m-%d' format.
+            - If 'id' is not provided, generate a new uuid4 value.
         """
+
         super().__init__(*args, **kwargs)
