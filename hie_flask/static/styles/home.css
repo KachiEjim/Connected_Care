@@ -7,7 +7,11 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto;
+<<<<<<< HEAD:hie_flask/static/styles/signup.css
    background-image: url('/Connected_Care/templates/images/bg.jpg');
+=======
+   background-image: url('../images/bg.jpg');
+>>>>>>> backend_flask:hie_flask/static/styles/home.css
     background-position: center;
     background-repeat: no-repeat;
     object-fit: contain;

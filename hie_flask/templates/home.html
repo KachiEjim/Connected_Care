@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD:hie_flask/static/signup.html
+    <title>Connected Care</title>
+    <link rel="stylesheet" href="styles/signup.css">
+=======
+    <title>Contected Care</title>
+    <link rel="stylesheet" href="../static/styles/home.css">
+>>>>>>> backend_flask:hie_flask/templates/home.html
+</head>
+<body>
+    <!--header section-->
+    <header>
+        <div class="logo">
+            <h2>HIE</h2>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <!--Form-->
+    <h1>Welcome to Connected Care</h1>
+    <div class="big-container">
+        <div class="box">
+            <h3>Register As:</h3>
+            <form action="" id="ra">
+                <label for="hospital">Hospital</label>
+                <input type="radio" name="role" id="hospital" value="hospital"> <br><br>
+                <label for="doctor">Doctor</label>
+                <input type="radio" name="role" id="doctor" value="doctor"> <br><br>
+                <label for="patient">Patient</label>
+                <input type="radio" name="role" id="patient" value="patient">
+            </form>
+        </div>
+        <form id="signupForm">    
+            <div class="form-container">
+                <h3>Sign-up</h3>
+                <label for="username"> Enter Your name </label>
+                <input type="text" name="username" id="name" placeholder="Enter Your name"> 
+                <span id="name-error"></span>
+            </div>
+            <div class="form-container">
+                <label for="email"> Enter Your Email  </label>
+                <input type="email" name="email" id="email" placeholder=" Enter Your Email"> 
+                <span id="email-error"></span>
+            </div>
+            <div class="form-container">
+                <label for="password"> Enter Password </label>
+                <input type="password" name="password" id="password" placeholder="Enter Password">
+                <span id="password-error"></span>
+            </div>
+            <div class="btn">
+                <button type="submit" id="submit-btn">Submit</button>
+            </div>
+        </form>
+<<<<<<< HEAD:hie_flask/static/signup.html
+    </div>
+    <script src="scripts/signup.js"></script>
+=======
+    
+   
+    <script src="../scripts/home.js"></script>
+>>>>>>> backend_flask:hie_flask/templates/home.html
+</body>
+</html>
