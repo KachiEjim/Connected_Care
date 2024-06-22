@@ -62,13 +62,19 @@ h1{
    align-items: center;
    
 }
-.box{
+.big-container .box{
     margin-left: 5px;
     background-color: #ffff;
     border-radius: 6px;
-    width: 200px;
-    padding: 20px;
-    height: fit-content;
+    width: 250px;
+    padding:0 30px;
+    height:200px;
+}
+.big-container .box h3{
+    display: block;
+}
+.box input{
+    float: right;
 }
 
     
