@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/', strict_slashes=False)
 def landing_page():
     """ Displays the landing page """
-    return render_template('home.html')
+    return render_template('hie.html')
 
 if __name__ == "__main__":
     """ Main Function """
