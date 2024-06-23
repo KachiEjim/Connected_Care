@@ -14,7 +14,7 @@ app.register_blueprint(patient_bp)
 @app.route('/', strict_slashes=False)
 def landing_page():
     """ Displays the landing page """
-    return render_template('landing_page/index.html')
+    return render_template('landing_page_html/index.html')
 
 
 
