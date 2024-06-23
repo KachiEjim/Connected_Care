@@ -1,15 +1,20 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session
+#!/usr/bin/python3
+from flask import (
+    render_template,
+    request,
+    redirect,
+    url_for,
+    flash,
+    session,
+    Blueprint,
+)
 from hie_models import storage
 from hie_models.patient import Patient
-from hie_flask import app_views
 
-app = Flask(__name__)
-app.config["SECRET_KEY"] = "CONNECTED_CARE"
-
-app.register_blueprint(app_views)
+patient_bp = Blueprint("patient_bp", __name__)
 
 
-@app.route("/patient/signup", methods=["GET", "POST"], strict_slashes=False)
+@patient_bp.route("/patient/signup", methods=["GET", "POST"], strict_slashes=False)
 def patient_signup():
     """Displays the signup page"""
     if request.method == "POST":
@@ -38,7 +43,7 @@ def patient_signup():
         return render_template("signup.html")
 
 
-@app.route("/patient/login", methods=["GET", "POST"], strict_slashes=False)
+@patient_bp.route("/patient/login", methods=["GET", "POST"], strict_slashes=False)
 def patient_login():
     """Displays the login page"""
     if request.method == "POST":
@@ -65,7 +70,7 @@ def patient_login():
     return render_template("login.html")
 
 
-@app.route("/logout")
+@patient_bp.route("/logout")
 def logout():
     session.pop("patient_id", None)  # Remove patient_id from session
     flash("You have been logged out.", "success")
