@@ -1,0 +1,92 @@
+/* additional.css */
+
+.features-section {
+    background-image: url(../landing_page_static/img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 
+}
+
+.features-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.features-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.features-section p {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    flex: 0 0 100px;
+    margin-right: 20px;
+}
+
+.feature-icon img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover .feature-icon img {
+    transform: rotate(360deg);
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    transition: color 0.3s ease;
+}
+
+.feature-content h3:hover {
+    color: #ffcc00;
+}
+
+.feature-content p {
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-icon {
+        margin-bottom: 20px;
+    }
+}
+
+
+.head {
+    color:rgba(231, 225, 225, 0.966);
+}

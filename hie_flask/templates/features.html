@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}Connected Care - Features{% endblock %}
+
+{% block content %}
+<section class="features-section">
+    <div class="container">
+        <div class="head" >
+            <h2>Our Features</h2>
+            <p>Discover the powerful features of Connected Care that make health information exchange seamless, secure, and efficient.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="{{ url_for('static', filename='landing_page_static/img/security.png') }}" alt="Secure Data">
+            </div>
+            <div class="feature-content">
+                <h3>Secure Data Sharing</h3>
+                <p>Our platform ensures that your health data is shared securely between healthcare providers and institutions, maintaining the highest standards of privacy and security.</p>
+            </div>
+        </div>
+        
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="{{ url_for('static', filename='images/bg.jpg') }}" alt="Patient Access">
+            </div>
+            <div class="feature-content">
+                <h3>Patient Access</h3>
+                <p>Patients can easily access their health information anytime, anywhere, empowering them to make informed decisions about their health.</p>
+            </div>
+        </div>
+        
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="{{ url_for('static', filename='landing_page_static/img/intergration1.jpg') }}" alt="Integration">
+            </div>
+            <div class="feature-content">
+                <h3>Integration with EHR Systems</h3>
+                <p>Our platform seamlessly integrates with various Electronic Health Records (EHR) systems, ensuring that your medical records are always up-to-date and accessible.</p>
+            </div>
+        </div>
+        
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="{{ url_for('static', filename='images/data_analytics.png') }}" alt="Data Analytics">
+            </div>
+            <div class="feature-content">
+                <h3>Data Analytics</h3>
+                <p>Leverage advanced data analytics and reporting tools to support clinical decision-making and improve patient outcomes.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="{{ url_for('static', filename='images/telemedicine.png') }}" alt="Telemedicine">
+            </div>
+            <div class="feature-content">
+                <h3>Telemedicine</h3>
+                <p>Our telemedicine feature allows healthcare providers to conduct virtual consultations, making healthcare more accessible and convenient for patients.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="{{ url_for('static', filename='images/appointment_scheduling.png') }}" alt="Appointment Scheduling">
+            </div>
+            <div class="feature-content">
+                <h3>Appointment Scheduling</h3>
+                <p>Patients can easily schedule and manage their appointments online, reducing wait times and improving the overall patient experience.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="{{ url_for('static', filename='images/health_monitoring.png') }}" alt="Health Monitoring">
+            </div>
+            <div class="feature-content">
+                <h3>Health Monitoring</h3>
+                <p>Our platform provides tools for continuous health monitoring, allowing patients and healthcare providers to track health metrics and trends over time.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="{{ url_for('static', filename='images/patient_education.png') }}" alt="Patient Education">
+            </div>
+            <div class="feature-content">
+                <h3>Patient Education</h3>
+                <p>Access a wealth of educational resources and materials to help patients understand their health conditions and treatment options.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block footer %}
+<footer class="custom-footer">
+    <div class="footer-container">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h5>Contact Us</h5>
+                <ul>
+                    <li>Email: info@connectedcare.com</li>
+                    <li>Phone: +1 234 567 890</li>
+                    <li>Address: 123 Health St, Wellness City, HW 45678</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Follow Us</h5>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                    <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Join Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-row">
+            <div class="footer-col text-center">
+                <p>&copy; 2023 Connected Care. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}

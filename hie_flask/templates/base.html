@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing_page_static/css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+
+    <title>{% block title %}ConCARE{% endblock %}</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='landing_page_static/favico/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='landing_page_static/favico/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='landing_page_static/favico/favicon-16x16.png') }}">
+    <link rel="mask-icon" href="{{ url_for('static', filename='landing_page_static/favico/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand con_colour" href="http://localhost:5000/">CONNECTED CARE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="http://localhost:5000/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Pricing</a>
+            <a class="nav-item nav-link" href="http://localhost:5000/features">Features</a>
+            <a class="nav-item nav-link" href="http://localhost:5000/about">About</a>
+            <a class="nav-item nav-link" href="http://localhost:5000/about">About</a>
+
+            <a class="nav-item nav-link btn btn-primary text-white tombol" href="#">Join Us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir Navbar -->
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer class="custom-footer">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-col">
+            <h5>Contact Us</h5>
+            <ul>
+              <li>Email: info@connectedcare.com</li>
+              <li>Phone: +1 234 567 890</li>
+              <li>Address: 123 Health St, Wellness City, HW 45678</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Follow Us</h5>
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+              <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="http://localhost:5000/">Home</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="http://localhost:5000/features">Features</a></li>
+              <li><a href="http://localhost:5000/about">About</a></li>
+              <li><a href="#">Join Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-row">
+          <div class="footer-col text-center">
+            <p>&copy; 2023 Connected Care. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

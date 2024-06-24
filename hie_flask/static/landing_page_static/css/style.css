@@ -1,7 +1,72 @@
 
+@import url('../../styles/features.css');
 
+/* about page css */
+.about-section {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+/*CONNECTED CARE COLOUR
+*/
+.con_colour {
+  background-color: rgb(0, 123, 255, 0.5);
+  border-radius: 20px ;
+  
+  }
+/*END*/
+.about-section .container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 3px;
+    font-size: medium;
+    background-color: rgb(0, 0, 0);
+    color:rgba(23, 162, 184);
+}
+.about-section h2, .about-section h3 {
+  color: #ffcc00; /* Initial color */
+  transition: color 0.3s ease-out;
 
+}
 
+.about-section h2:hover, .about-section h3:hover {
+  color: #ff6600; /* Hover color */
+}
+
+.about-section p {
+  color: #e0e0e0; /* Pretty color for paragraphs */
+  font-size: 1.1em;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.about-section ul {
+  list-style-type: none;
+  padding: 0;
+  font-style:oblique;
+
+}
+
+.about-section ul li {
+  margin-bottom: 10px;
+  font-style: italic;
+
+}
+
+.about-section ul li::before {
+  content: '•';
+  color: #ffcc00; /* Bullet color */
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+.about-section ul li strong {
+  color: #ffcc00; /* Color for strong text */
+}
+
+/*About page ends*/
 /* Navbar */
 .navbar-brand {
     font: 32px Viga;
