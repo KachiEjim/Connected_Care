@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='patient_static/css/signup.css') }}">
+    <script src="{{ url_for('static', filename='patient_static/scripts/signup.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="container1 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center"><b>Sign Up</b></h2>
+                        <form id="signupForm" action="/patient/signup" method="post">
+                            <div class="form-group">
+                                <label for="first_name">First Name</label>
+                                <input type="text" class="form-control" id="first_name" name="firstName" placeholder="Enter Your First Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" class="form-control" id="last_name" name="lastName" placeholder="Enter Your Last Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthday">Enter your birthday:</label>
+                                <input type="date" id="birthday" name="dateofBirth">
+                                <p id="displayDate"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select class="form-control" id="gender" name="gender">
+                                    <option value="Default">Select Your Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select class="form-control" id="country" name="country">
+                                    <option value="Default">Select Your Country</option>
+                                    <option value="United States">United States</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Nigeria">Nigeria</option>
+                                    <option value="South Africa">South Africa</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="_password" placeholder="Enter Your Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm_password">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Your Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                        </form>
+                        <div id="error-message" class="text-danger mt-3"></div>
+                        <div class="text-center mt-3">
+                            <a href="http://localhost:5000/patient/login" >Already have an account? Login</a><br>
+                            <a href="#">Forgotten password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %} 

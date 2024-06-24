@@ -1,3 +1,14 @@
+
+
+/* about page css */
+.about-section {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+
 .about-section .container {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-weight: 3px;

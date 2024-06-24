@@ -40,7 +40,7 @@ def patient_signup():
 
     else:
         # Display signup page
-        return render_template("signup.html")
+        return render_template("patient_html/signup.html")
 
 
 @patient_bp.route("/patient/login", methods=["GET", "POST"], strict_slashes=False)

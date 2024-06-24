@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block extra_css %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing_page_static/css/about.css') }}">
+{% endblock %}
+
 {% block content %}
 <section class="about-section">
     <div class="container">

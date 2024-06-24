@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block extra_css %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing_page_static/css/features.css') }}">
+{% endblock %}
+
 {% block title %}Connected Care - Features{% endblock %}
 
 {% block content %}
@@ -21,7 +26,7 @@
         
         <div class="feature">
             <div class="feature-icon">
-                <img src="{{ url_for('static', filename='images/bg.jpg') }}" alt="Patient Access">
+                <img src="{{ url_for('static', filename='landing_page_static/img/bg.jpg') }}" alt="Patient Access">
             </div>
             <div class="feature-content">
                 <h3>Patient Access</h3>

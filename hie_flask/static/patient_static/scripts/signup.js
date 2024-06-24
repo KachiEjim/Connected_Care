@@ -1,73 +1,63 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const userName = document.getElementById("name");
-    const email = document.getElementById("email");
-    const password = document.getElementById("password");
-    const nameError = document.getElementById("name-error");
-    const emailError = document.getElementById("email-error");
-    const passwordError = document.getElementById("password-error");
-    const signupForm = document.getElementById("signupForm");
-    const radioButtons = document.querySelectorAll('input[name="role"]');
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('signupForm');
+    const errorMessage = document.getElementById('error-message');
 
-    // Add event listener for the form submission
-    signupForm.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the form from submitting
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        let isValid = true;
+        errorMessage.innerHTML = '';
 
-        // Check which radio button is selected
-        let selectedRole;
-        radioButtons.forEach((rb) => {
-            if (rb.checked) {
-                selectedRole = rb.value;
+        // Clear previous error messages
+        const errorElements = document.querySelectorAll('.error-message');
+        errorElements.forEach(element => element.remove());
+
+        // Validate each field
+        const fields = ['first_name', 'last_name', 'birthday', 'gender', 'country', 'email', 'password', 'confirm_password'];
+        fields.forEach(field => {
+            const input = document.getElementById(field);
+            if (!input.value || (input.type === 'select-one' && input.value === 'Default')) {
+                isValid = false;
+                showError(input, 'This field cannot be empty');
             }
         });
 
-        // Display the selected role
-        if (selectedRole) {
-            alert(`You selected: ${selectedRole}`);
-        } else {
-            alert('Please select a role.');
+        // Validate email format
+        const email = document.getElementById('email');
+        if (email.value && !validateEmail(email.value)) {
+            isValid = false;
+            showError(email, 'Invalid email format');
         }
 
-        // Validate the form fields
-        let valid = true;
-
-        // username validation
-        if (userName.value === "" || userName.value === null) {
-            nameError.textContent = "Enter Your Name **";
-            valid = false;
-        } else {
-            nameError.textContent = "";
+        // Validate password match
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirm_password');
+        if (password.value && confirmPassword.value && password.value !== confirmPassword.value) {
+            isValid = false;
+            showError(confirmPassword, 'Passwords do not match');
         }
 
-        // email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email.value.match(emailRegex)) {
-            emailError.textContent = "Invalid email address **";
-            valid = false;
-        } else {
-            emailError.textContent = "";
-        }
-
-        // password validation
-        if (password.value === "") { 
-            passwordError.textContent = "Password cannot be empty **";
-            valid = false;
-        } else if (password.value.length <= 5) { 
-            passwordError.textContent = "Password must be more than 5 characters **";
-            valid = false;
-        } else if (password.value.length >= 20) { 
-            passwordError.textContent = "Password must not be more than 20 characters **";
-            valid = false;
-        } else if (password.value === "password") {
-            passwordError.textContent = "Password cannot be 'password' **";
-            valid = false;
-        } else {
-            passwordError.textContent = "";
-        }
-
-        // If the form is valid, submit it (or handle it as needed)
-        if (valid && selectedRole) {
-            console.log('Form is valid and ready for submission.');
-            // Here you can proceed with form submission or further processing
+        if (isValid) {
+            // Submit the form if all validations pass
+            form.submit();
         }
     });
+
+    // Function to show error message
+    function showError(input, message) {
+        const error = document.createElement('div');
+        error.className = 'error-message text-danger';
+        error.innerText = message;
+        input.parentNode.appendChild(error);
+
+        // Remove error message when input is valid
+        input.addEventListener('input', function() {
+            error.remove();
+        });
+    }
+
+    // Function to validate email format
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
 });

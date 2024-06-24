@@ -14,17 +14,22 @@ app.register_blueprint(patient_bp)
 @app.route('/', strict_slashes=False)
 def landing_page():
     """ Displays the landing page """
-    return render_template('index.html')
+    return render_template('landing_page_html/index.html')
 
 @app.route('/about', strict_slashes=False)
 def about_page():
     """ Displays the landing page """
-    return render_template('about_us.html')
+    return render_template('landing_page_html/about_us.html')
 
 @app.route('/features', strict_slashes=False)
 def features_page():
     """ Displays the landing page """
-    return render_template('features.html')
+    return render_template('landing_page_html/features.html')
+
+@app.route('/t', strict_slashes=False)
+def test():
+    """ Displays the landing page """
+    return render_template('patient_html/signup.html')
 
 
 if __name__ == "__main__":
