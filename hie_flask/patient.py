@@ -29,14 +29,14 @@ def patient_signup():
                 flash(
                     f"Patient with email {email} already exists in database. Please login instead."
                 )
-                return redirect(url_for("patient_login"))
+                return render_template("landing_page_html/index.html")
 
         # Create new patient and save to database
         patient = Patient(**patient_data)
         patient.hash_password()
         storage.new(patient)
         storage.save()
-        return redirect(url_for("patient_login"))
+        return render_template("landing_page_html/index.html")
 
     else:
         # Display signup page

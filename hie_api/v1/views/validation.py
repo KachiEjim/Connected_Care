@@ -8,14 +8,15 @@ from hie_models.hospital import Hospital
 from hie_models.basemodel import BaseModel
 
 
-@app_views.route("/validate_user", methods=["POST"], strict_slashes=False)
+@app_views.route("/validate", methods=["POST", "GET"], strict_slashes=False)
 @swag_from("documentation/validation/validate.yml", methods=["POST"])
 def validate():
     """Validates a user's email"""
     data = request.get_json()
     email = data.get("email")
     password = data.get("password")
-    user = data.get(user)
+    user = data.get("user")
+    opp = data.get("opp")
 
     # Check if user type is provided
     if not user:
@@ -38,6 +39,13 @@ def validate():
 
     # Check if user exists in database
     existing_patient = storage.all(user).values()
+
+    if opp == "signup":
+        for patient in existing_patient:
+            if email == getattr(patient, "email"):
+                return jsonify({"email": "exists"})
+    else:
+        return jsonify({"email": "not_exists"})
 
     for patient in existing_patient:
         if email == getattr(patient, "email"):

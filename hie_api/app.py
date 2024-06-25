@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Flask Application """
 from hie_models import storage
-from api.v1.views import app_views
+from hie_api.v1.views import app_views
 from os import environ
 from flask import Flask, render_template, make_response, jsonify
 from flask_cors import CORS
@@ -41,4 +41,4 @@ if __name__ == "__main__":
     """ Main Function """
     host = environ.get('HIE_API_HOST', '0.0.0.0')
     port = environ.get('HIE_API_PORT', '5001')
-    app.run(host=host, port=port, threaded=True)
+    app.run(host=host, port=port, threaded=True, debug=True)

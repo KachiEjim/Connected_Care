@@ -1,7 +1,49 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('signupForm');
     const errorMessage = document.getElementById('error-message');
+    const baseURL = 'http://192.168.186.212';
 
+        // Function to show error message
+        function showError(input, message) {
+            const error = document.createElement('div');
+            error.className = 'error-message text-danger';
+            error.innerText = message;
+            input.parentNode.appendChild(error);
+    
+            // Remove error message when input is valid
+            input.addEventListener('input', function() {
+                error.remove();
+            });
+        }
+    
+        // Function to validate email format
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+    
+    
+    // Function to validate user by making an asynchronous request
+    async function validateUser(email, password) {
+        const response = await fetch(`${baseURL}:5001/hie_api/v1/validate`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: email,
+                password: password,
+                user: 'patient',
+                opp: 'signup'
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        return response.json();
+    }
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         let isValid = true;
@@ -37,27 +79,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (isValid) {
-            // Submit the form if all validations pass
-            form.submit();
+            // Perform the additional check before submitting the form
+            validateUser(email.value, password.value).then(response => {
+                if (response.email === 'exists') {
+                    // Display the login page link
+                    errorMessage.innerHTML = `Email already exists. <a href="${baseURL}:5000/patient/login">Login here</a>`;
+                } else {
+                    // Submit the form if all validations pass
+                    form.submit();
+                }
+            }).catch(error => {
+                console.error('Error validating user:', error);
+                errorMessage.innerHTML = 'An error occurred while validating the user.' + error;
+            });
         }
     });
 
-    // Function to show error message
-    function showError(input, message) {
-        const error = document.createElement('div');
-        error.className = 'error-message text-danger';
-        error.innerText = message;
-        input.parentNode.appendChild(error);
 
-        // Remove error message when input is valid
-        input.addEventListener('input', function() {
-            error.remove();
-        });
-    }
-
-    // Function to validate email format
-    function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(String(email).toLowerCase());
-    }
 });

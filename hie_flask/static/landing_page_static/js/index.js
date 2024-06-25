@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Change color every 5 seconds
-    setInterval(changeBackgroundColor, 400);
+    setInterval(changeBackgroundColor, 1000);
 
     // Initial color change
     changeBackgroundColor();
