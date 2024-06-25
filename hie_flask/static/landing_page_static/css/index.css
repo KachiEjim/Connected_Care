@@ -1,13 +1,13 @@
 
-
-
+.container{
+  z-index: 100;
+}
 /* Jumbotron */
 .jumbotron {
     background: url(../img/bg.jpg);
     background-size: cover;
     height: 540px;
     position: relative;
-    z-index: -1;
 }
 
 .jumbotron::after {
@@ -226,7 +226,12 @@
 .tombol {
     border-radius: 40px;
     text-transform: uppercase;
+    font-style:oblique;
+    font-weight: bold;
+    
 }
+
+
 
 #meet_team {
     color: #00050a;

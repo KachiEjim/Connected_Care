@@ -2,16 +2,18 @@
 {% block extra_css %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='landing_page_static/css/index.css') }}">
-{% endblock %}
+    <script src="{{ url_for('static', filename='landing_page_static/js/index.js') }}"></script>
 
-{% block title %}Connected Care - Home{% endblock %}
+{% endblock %}
+{% block title %}ConCare - Home{% endblock %}
+
 
 {% block content %}
 <!-- Jumbotron -->
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h5 class="display-4"> <span> Connected Care  </span><br> secure and efficient health information exchange.</h5>
-    <a href="#" class="btn btn-info btn-lg tombol">Register / Login</a>
+    <a href="http://localhost:5000/patient/signup" id="navigateText" class=" clickable-text btn btn-info btn-lg tombol">Login / Register</a>
   </div>
 </div>
 <!-- akhir Jumbotron -->
@@ -104,4 +106,5 @@
     </div>
   </section>
 </div>
+
 {% endblock %}
