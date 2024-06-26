@@ -43,15 +43,18 @@ def validate():
     if opp == "signup":
         for patient in existing_patient:
             if email == getattr(patient, "email"):
-                return jsonify({"email": "exists"})
-    else:
-        return jsonify({"email": "not_exists"})
+                return jsonify({"email": True})
+        return jsonify({"email": False})
 
-    for patient in existing_patient:
-        if email == getattr(patient, "email"):
-            valid_password = patient.check_password(password)
-            if valid_password:
-                return make_response(jsonify({"valid": True}), 200)
+    if opp == "login":
+        for patient in existing_patient:
+            if email == getattr(patient, "email"):
+                valid_password = patient.check_password(password)
+                if valid_password:
+                    return jsonify({"email": True, "password": True})
+                else:
+                    return jsonify({"email": True, "password": False})
 
-    # If user does not exist in database or password is incorrect
-    return make_response(jsonify({"valid": False}), 200)
+        return jsonify({"email": False, "password": False})
+
+    return jsonify({"ERROR": 500}, 500)

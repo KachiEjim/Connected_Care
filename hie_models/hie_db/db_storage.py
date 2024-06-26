@@ -69,6 +69,8 @@ class DBStorage:
             "mysql+mysqldb://{}:{}@{}/{}".format(HIE_USER, HIE_PWD, HIE_HOST, HIE_DB)
         )
 
+        """Base.metadata.drop_all(self.__engine)"""
+
     def reload(self):
         """
         Reloads data from the database.

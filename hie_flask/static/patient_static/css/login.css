@@ -2,8 +2,8 @@
 
 body {
     background-image: url(../img/bgnav.png);
-
 }
+
 nav {
     background-color: aqua;
 }
@@ -27,12 +27,14 @@ nav {
 .card-body {
     padding: 20px;
 }
+
 .sign {
     border-bottom: 1px solid black;
     color: #007bff;
     font-weight: 900;
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
+
 h2 {
     margin-bottom: 20px;
 }
@@ -87,5 +89,4 @@ h2 {
 .bt {
     margin-top: 30px;
     border-radius: 50px;
-    
 }

@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}ConCare - Register{% endblock %}
+{% block title %}ConCare - Login{% endblock %}
 
 {% block extra_css %}
 {{ super() }}
-<link rel="stylesheet" href="{{ url_for('static', filename='patient_static/css/signup.css') }}">
-<script src="{{ url_for('static', filename='patient_static/scripts/signup.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='patient_static/css/login.css') }}">
+<script src="{{ url_for('static', filename='patient_static/scripts/login.js') }}"></script>
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,9 @@
         <div class="col-md-8 col-lg-6">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="text-center"><b>Sign Up</b></h2>
+                    <div class="sign">
+                        <h2 class="text-center"><b>Login</b></h2>
+                    </div>
                     <form id="signupForm" action="/patient/login" method="post">
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -26,11 +28,11 @@
                             <input type="password" class="form-control" id="password" name="_password"
                                 placeholder="Enter Your Password">
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                        <button type="submit" class=" bt btn btn-primary btn-block">Login</button>
                     </form>
                     <div id="error-message" class="text-danger mt-3"></div>
                     <div class="text-center mt-3">
-                        <a href="http://localhost:5000/patient/login">Don't have an account? Register here<br>
+                        <a href="http://localhost:5000/patient/signup">Don't have an account? Register here<br>
                         <a href="#">Forgotten password?</a>
                     </div>
                 </div>
