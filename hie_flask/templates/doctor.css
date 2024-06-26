@@ -61,7 +61,7 @@ h3{
     cursor: pointer;
   
 }
-.box-1 form button{
+ button{
     width: 100%;
     padding: 15px 65px;
     text-align: center;
@@ -92,12 +92,13 @@ label{
     background-color: #eeee;
 }
 .box-2 .box-container > div{
-    padding-top: 17px;
+    padding-top: 16px;
     color: rgb(22, 22, 130);
     padding-left: 10px;
     border-bottom: 1px solid #ffff;
     cursor: pointer;
 }
+
 .box-3{
     width: 100%;
     padding: 10px;
@@ -123,4 +124,10 @@ h2{
 p{
     font-size: 12px;
     font-weight:lighter;
+}
+@media screen and (max-width:678px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+    
 }
