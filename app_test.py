@@ -1,23 +1,82 @@
-from hie_models.hie_db.db_storage import DBStorage
-from hie_models.patient import Patient
-from hie_models.doctor import Doctor, patients_doctors
-from hie_models.hospital import Hospital
-from hie_models.consent import Consents
-import hie_models
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('signupForm');
+    const errorMessage = document.getElementById('error-message');
+    const baseURL = 'http://192.168.186.212';
+
+        // Function to show error message
+    function showError(input, message) {
+            const error = document.createElement('div');
+            error.className = 'error-message text-danger';
+            error.innerText = message;
+            input.parentNode.appendChild(error);
+    
+            // Remove error message when input is valid
+            input.addEventListener('input', function() {
+                error.remove();
+            });
+        }
+
+    // Function to validate user by making an asynchronous request
+    async function validateUser(email, password) {
+        const response = await fetch(`${baseURL}:5001/hie_api/v1/validate`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: email,
+                password: password,
+                user: 'patient',
+                opp: 'signup'
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        return response.json();
+    }
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        let isValid = true;
+        errorMessage.innerHTML = '';
+
+        // Clear previous error messages
+        const errorElements = document.querySelectorAll('.error-message');
+        errorElements.forEach(element => element.remove());
+
+        // Validate each field
+        const fields = ['email', 'password'];
+        fields.forEach(field => {
+            const input = document.getElementById(field);
+            if (!input.value || (input.type === 'select-one' && input.value === 'Default')) {
+                isValid = false;
+                showError(input, 'This field cannot be empty');
+            }
+        });
 
 
-d = hie_models.storage.all(Doctor)
-p = hie_models.storage.all(Patient)
-pd = hie_models.storage.all(patients_doctors)
-# Query all users and their associated addresses from the association table
-h = hie_models.storage.all(Hospital)
+        if (isValid) {
+            // Perform the additional check before submitting the form
+            validateUser(email.value, password.value).then(response => {
+                if (!response.email) {
+                    // Display the login page link
+                    errorMessage.innerHTML = `Email dosent exist. <a href="${baseURL}:5000/patient/login">Signup Here</a>`;
+                } else if (response.password === false) {
+                    console.log(response)
+                    // Display the login page link
+                    showError(password, `Incorrect password.`);
+                } else {
+                    // Submit the form if all validations pass
+                    form.submit();
+                }
+            }).catch(error => {
+                console.error('Error validating user:', error);
+                errorMessage.innerHTML = 'An error occurred while validating the user.' + error;
+            });
+        }
+    });
 
-for i in p.values():
-    print(i.id)
-"""for i in h.values():
-    print("----------")
-    print(f"\t{i.id}")
-    for j in i.doctors:
-        print(j.id)
-    print("----------")
-"""
+
+});

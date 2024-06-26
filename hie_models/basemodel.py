@@ -115,6 +115,9 @@ class BaseModel:
         """
         Method to check if a password is correct
         """
+        if isinstance(self._password, str):
+            self._password = self._password.encode("utf-8")
+
         return bcrypt.checkpw(text.encode("utf-8"), self._password)
 
     def hash_password(self):

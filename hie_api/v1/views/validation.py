@@ -8,14 +8,15 @@ from hie_models.hospital import Hospital
 from hie_models.basemodel import BaseModel
 
 
-@app_views.route("/validate_user", methods=["POST"], strict_slashes=False)
+@app_views.route("/validate", methods=["POST", "GET"], strict_slashes=False)
 @swag_from("documentation/validation/validate.yml", methods=["POST"])
 def validate():
     """Validates a user's email"""
     data = request.get_json()
     email = data.get("email")
     password = data.get("password")
-    user = data.get(user)
+    user = data.get("user")
+    opp = data.get("opp")
 
     # Check if user type is provided
     if not user:
@@ -39,11 +40,21 @@ def validate():
     # Check if user exists in database
     existing_patient = storage.all(user).values()
 
-    for patient in existing_patient:
-        if email == getattr(patient, "email"):
-            valid_password = patient.check_password(password)
-            if valid_password:
-                return make_response(jsonify({"valid": True}), 200)
+    if opp == "signup":
+        for patient in existing_patient:
+            if email == getattr(patient, "email"):
+                return jsonify({"email": True})
+        return jsonify({"email": False})
 
-    # If user does not exist in database or password is incorrect
-    return make_response(jsonify({"valid": False}), 200)
+    if opp == "login":
+        for patient in existing_patient:
+            if email == getattr(patient, "email"):
+                valid_password = patient.check_password(password)
+                if valid_password:
+                    return jsonify({"email": True, "password": True})
+                else:
+                    return jsonify({"email": True, "password": False})
+
+        return jsonify({"email": False, "password": False})
+
+    return jsonify({"ERROR": 500}, 500)

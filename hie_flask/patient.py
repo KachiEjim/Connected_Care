@@ -29,14 +29,19 @@ def patient_signup():
                 flash(
                     f"Patient with email {email} already exists in database. Please login instead."
                 )
-                return redirect(url_for("patient_login"))
+                return render_template("patient_html/login.html")
 
         # Create new patient and save to database
         patient = Patient(**patient_data)
         patient.hash_password()
         storage.new(patient)
         storage.save()
-        return redirect(url_for("patient_login"))
+        patient = patient.to_dict()
+        return render_template(
+            "patient_html/login.html",
+            message="Account successfully created, Login",
+            user=patient,
+        )
 
     else:
         # Display signup page
@@ -49,7 +54,7 @@ def patient_login():
     if request.method == "POST":
         # Check if patient exists in database
         email = request.form.get("email")
-        password = request.form.get("password")
+        password = request.form.get("_password")
         existing_patient = storage.all(Patient).values()
 
         for patient in existing_patient:
@@ -57,17 +62,12 @@ def patient_login():
                 # Check password
                 if patient.check_password(password):
                     session["patient_id"] = getattr(patient, "id")
-                    return redirect(url_for("patient_dashboard"))
-                else:
-                    flash("Incorrect password, please try again.")
-                    return redirect(url_for("patient_login"))
-
-        # If patient does not exist in database
-        flash("Patient does not exist, please sign up.")
-        return redirect(url_for("patient_signup"))
-
+                    patient = patient.to_dict()
+                    return render_template(
+                        ("patient_html/dashboard.html"), patient=patient
+                    )
     # If request method is GET
-    return render_template("login.html")
+    return render_template("patient_html/login.html")
 
 
 @patient_bp.route("/logout")
