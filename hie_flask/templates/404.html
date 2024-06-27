@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}ConCare -  404 Not Found{% endblock %}
+
+{% block extra_css %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='landing_page_static/css/404.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="all">
+<div class="container2 text-center mt-5">
+    <h1 class="display-4">404 - Page Not Found</h1>
+    <p class="lead">Oops! This page is not available yet. We are working hard to make it available soon and possibly, even better!</p>
+    <p class="lead">In the meantime, enjoy this funny message: "Why did the web page go to therapy? Because it had too many issues!"</p>
+    <a href="{{ url_for('landing_page') }}" class="btn btn-primary">Go to Home</a>
+</div>
+
+<!-- Display the error message at the bottom before the footer -->
+<div class="container3 text-center mt-5">
+    <p class="text-muted">This below is for our engineers to work with, don't bother looking at it:</p>
+    <button id="toggleErrorBtn" class="btn btn-secondary">Show Error Details</button>
+    <div id="errorBox" class="error-box mt-3" style="display: none;">
+        <p class="text-muted">{{ e }}</p>
+    </div>
+</div>
+</div>
+<script>
+    document.getElementById('toggleErrorBtn').addEventListener('click', function() {
+        var errorBox = document.getElementById('errorBox');
+        if (errorBox.style.display === 'none') {
+            errorBox.style.display = 'block';
+            this.textContent = 'Hide Error Details';
+        } else {
+            errorBox.style.display = 'none';
+            this.textContent = 'Show Error Details';
+        }
+    });
+</script>
+{% endblock %}

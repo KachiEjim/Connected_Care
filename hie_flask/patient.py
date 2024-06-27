@@ -7,11 +7,23 @@ from flask import (
     flash,
     session,
     Blueprint,
+    jsonify,
 )
+from functools import wraps
 from hie_models import storage
 from hie_models.patient import Patient
 
 patient_bp = Blueprint("patient_bp", __name__)
+
+
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if "patient_id" not in session:
+            return redirect(url_for("patient_bp.patient_login"))
+        return f(*args, **kwargs)
+
+    return decorated_function
 
 
 @patient_bp.route("/patient/signup", methods=["GET", "POST"], strict_slashes=False)
@@ -63,15 +75,29 @@ def patient_login():
                 if patient.check_password(password):
                     session["patient_id"] = getattr(patient, "id")
                     patient = patient.to_dict()
-                    return render_template(
-                        ("patient_html/dashboard.html"), patient=patient
-                    )
+                    return redirect(url_for("patient_bp.dashboard"))
     # If request method is GET
     return render_template("patient_html/login.html")
 
 
-@patient_bp.route("/logout")
-def logout():
+@patient_bp.route("/patient/logout")
+def patient_logout():
     session.pop("patient_id", None)  # Remove patient_id from session
     flash("You have been logged out.", "success")
-    return redirect(url_for("patient_login"))
+    return redirect(url_for("patient_bp.patient_login"))
+
+
+@patient_bp.route("/patient/dashboard")
+@login_required
+def dashboard():
+    patient_id = session.get("patient_id")
+    if not patient_id:
+        return jsonify({"error": "No patient_id in session"}), 400
+
+    # Retrieve the patient with the specific patient_id from storage
+    patient = storage.get(Patient, patient_id)
+
+    # Convert patient to dictionary
+    patient_dict = patient.to_dict()
+
+    return render_template("patient_html/dashboard.html", patiemt=patient_dict)

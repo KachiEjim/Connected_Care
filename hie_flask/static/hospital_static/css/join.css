@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+#navbarNav{
+    font-size: 15px;
+    
+}
+
+.navbar-brand {
+    font-size: 1.75em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand i {
+    margin-right: 10px;
+    font-size: 1.45em;
+}
+
+.nav-link {
+    font-size: 1.25em;
+    margin-right: 15px;
+    transition: color 0.3s, background 0.3s;
+}
+
+.bgp{
+    background-color: #b3000f;
+}
+.nav-link:hover {
+    color: #ffcc00 !important; /* Yellow text color */
+    background-color: #000000; /* Dark blue background color */
+    border-radius: 5px;
+}
+.features-section {
+    background-image: url('../../landing_page_static/img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+}
+
+.features-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.features-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.features-section p {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+}
+
+.feature {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon img {
+    transition: transform 0.3s ease;
+}
+
+.feature:hover .feature-icon img {
+    transform: rotate(360deg);
+}
+
+.feature-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-align: left;
+}
+
+.feature-content h3:hover {
+    color: rgb(72, 255, 0);
+}
+
+.feature-content p {
+    color: #666;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+.head {
+    color: rgba(231, 225, 225, 0.966);
+}
+
+#register-link {
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin-left: 10px;
+}

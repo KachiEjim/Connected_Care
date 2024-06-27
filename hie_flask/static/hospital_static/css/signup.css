@@ -1,0 +1,91 @@
+/* Located at static/patient_static/css/style.css */
+
+body {
+    background-image: url(../../patient_static/img/bgnav.png);
+
+}
+nav {
+    background-color: aqua;
+}
+
+.container1 {
+    max-width: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url(../../landing_page_static/img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+.sign {
+    border-bottom: 1px solid black;
+    color: #007bff;
+    font-weight: 900;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 19px;
+    margin-top: 15px;
+    border-bottom: 0.9px solid black;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        margin: 0 10px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-control {
+        padding: 8px;
+    }
+
+    .btn-primary {
+        padding: 8px 16px;
+    }
+}
+
+.bt {
+    margin-top: 30px;
+    border-radius: 50px;
+    
+}

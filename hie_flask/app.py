@@ -1,37 +1,97 @@
 #!/usr/bin/python3
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 from hie_models import storage
-from hie_models.patient import Patient
-
+from hie_flask.hospital import hospital_bp
 from hie_flask.patient import patient_bp
+from datetime import timedelta
 
+# Initialize the Flask application
 app = Flask(__name__)
-app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
+
+# Configure the Flask application
+app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
 app.config["SECRET_KEY"] = "CONNECTED_CARE"
+app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=30)
 
+# Register Blueprints for hospital and patient routes
 app.register_blueprint(patient_bp)
+app.register_blueprint(hospital_bp)
 
-@app.route('/', strict_slashes=False)
+
+@app.before_request
+def make_session_permanent():
+    """
+    Set the session to be permanent before each request.
+    This ensures that the session lifetime is extended to the configured duration.
+    """
+    session.permanent = True
+
+
+@app.route("/", strict_slashes=False)
 def landing_page():
-    """ Displays the landing page """
-    return render_template('landing_page_html/index.html')
+    """
+    Route: /
+    Method: GET
 
-@app.route('/about', strict_slashes=False)
+    Displays the landing page.
+
+    Returns:
+        render_template: HTML template for the landing page.
+    """
+    return render_template("landing_page_html/index.html")
+
+
+@app.route("/about", strict_slashes=False)
 def about_page():
-    """ Displays the landing page """
-    return render_template('landing_page_html/about_us.html')
+    """
+    Route: /about
+    Method: GET
 
-@app.route('/features', strict_slashes=False)
+    Displays the about page.
+
+    Returns:
+        render_template: HTML template for the about page.
+    """
+    return render_template("landing_page_html/about_us.html")
+
+
+@app.route("/features", strict_slashes=False)
 def features_page():
-    """ Displays the landing page """
-    return render_template('landing_page_html/features.html')
+    """
+    Route: /features
+    Method: GET
 
-@app.route('/t', strict_slashes=False)
-def test():
-    """ Displays the landing page """
-    return render_template('patient_html/signup.html')
+    Displays the features page.
+
+    Returns:
+        render_template: HTML template for the features page.
+    """
+    return render_template("landing_page_html/features.html")
+
+
+@app.route("/contact", methods=["GET", "POST"], strict_slashes=False)
+def contact_page():
+    """
+    Route: /contact
+    Methods: GET, POST
+
+    Displays the contact page.
+
+    Returns:
+        render_template: HTML template for the contact page.
+    """
+    return render_template("landing_page_html/contact.html")
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html", e=e), 404
 
 
 if __name__ == "__main__":
-    """ Main Function """
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    """
+    Main Function
+
+    Runs the Flask application on the specified host and port.
+    """
+    app.run(host="0.0.0.0", port=5000, debug=True)

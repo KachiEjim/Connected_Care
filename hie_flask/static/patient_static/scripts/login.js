@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('signupForm');
     const errorMessage = document.getElementById('error-message');
-    const baseURL = 'http://192.168.186.212';
+    const baseURL = 'http://192.168.173.212';
 
         // Function to show error message
     function showError(input, message) {
@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     showError(email, `User not found`);
                     errorMessage.innerHTML = `It looks like you don't have an account, no worries <a href="${baseURL}:5000/patient/signup">Sign up here!</a>`;
                 } else if (!response.password) {
-                    alert(response.password)
                     // Display the login page link
                     showError(password, `Incorrect password.`);
                 } else {

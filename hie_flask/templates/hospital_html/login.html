@@ -2,13 +2,13 @@
 
 {% block extra_css %}
     {{ super() }}
-    <link rel="stylesheet" href="{{ url_for('static', filename='hospital_static/css/signup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='hospital_static/css/login.css') }}">
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <!-- Bootstrap JS and dependencies -->
-    <script src="{{ url_for('static', filename='hospital_static/scripts/signup.js') }}"></script>
+    <script src="{{ url_for('static', filename='hospital_static/scripts/login.js') }}"></script>
 {% endblock %}
 
 {% block title %}ConCare - Partner with Us{% endblock %}
@@ -42,19 +42,9 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="sign">
-                            <h2 class="text-center"><b>Register Hospital</b></h2>
+                            <h2 class="text-center"><b>Hospital Login</b></h2>
                         </div>
-                        <form id="signupForm" action="/hospital/signup" method="post">
-                            <div class="form-group">
-                                <label for="name">Hospital Name:</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Hospital Name">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="address">Hospital Address:</label>
-                                <input type="text" class="form-control" id="address" name="address" placeholder="Enter Hospital Address">
-                            </div>
-
+                        <form id="signupForm" action="/hospital/login" method="post">
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Enter Hospital Email">
@@ -63,15 +53,11 @@
                                 <label for="password">Password</label>
                                 <input type="password" class="form-control" id="password" name="_password" placeholder="Enter Password">
                             </div>
-                            <div class="form-group">
-                                <label for="confirm_password">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
-                            </div>
-                            <button type="submit" class=" bt btn btn-primary btn-block">Sign Up</button>
+                            <button type="submit" class=" bt btn btn-primary btn-block">Login</button>
                         </form>
                         <div id="error-message" class="text-danger mt-3"></div>
                         <div class="text-center mt-3">
-                            <a href="http://localhost:5000/hospital/login" >Already have an account? Login</a><br>
+                            <a href="http://localhost:5000/hospital/signup" >Don't have an account? Register here</a><br>
                             <a href="#">Forgotten password?</a>
                         </div>
                     </div>

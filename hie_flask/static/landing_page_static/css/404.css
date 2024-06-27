@@ -1,0 +1,96 @@
+/* Additional styles for the 404 page */
+.container3{
+        max-width: 100%;
+        font-family: Arial, sans-serif;
+        background-image: url(../../landing_page_static/img/bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 10px;
+        width: 80%;
+        margin-left: 130px;
+        margin-top: 40px;
+        border-radius: 50PX;
+        color:salmon;
+    }
+.container2 {
+    max-width: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url(../../landing_page_static/img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    width: 80%;
+    margin-left: 130px;
+    margin-top: 40px;
+    border-radius: 50PX;
+    color:salmon;
+}
+.all{
+    max-width: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url(../../landing_page_static/img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container h1 {
+    font-size: 3em;
+    color: #333;
+}
+
+p {
+    font-size: 1.5em;
+    color: red;
+}
+.container p.lead {
+    font-size: 1.5em;
+    color: #666;
+}
+
+.container a.btn {
+    margin-top: 20px;
+}
+
+/* Hover effects */
+.container a.btn:hover {
+    background-color: #0B63DC;
+    color: #fff;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Error box styles */
+.error-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.error-box p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container h1 {
+        font-size: 2.5em;
+    }
+
+    .container p.lead {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .container h1 {
+        font-size: 2em;
+    }
+
+    .container p.lead {
+        font-size: 1em;
+    }
+}

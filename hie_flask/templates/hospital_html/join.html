@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='hospital_static/css/join.css') }}">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap JS and dependencies -->
+    <script src="{{ url_for('static', filename='hospital_static/scripts/signup.js') }}"></script>
+{% endblock %}
+
+{% block title %}ConCare - Partner with Us{% endblock %}
+
+{% block nav%}
+
+<nav class="bgp navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <i class="fas fa-hospital-alt"></i> CONNECTED CARE
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/patient/login">Join Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<section class="features-section">
+    <div class="container">
+        <a href="/hospital/signup" id="register-link" class="btn btn-primary mb-4">Register a Hospital</a>
+        <div class="head">
+            <h2>Why Partner with Us</h2>
+            <p>Join Connected Care as a hospital and enjoy numerous benefits:</p>
+        </div>
+        <div class="feature row align-items-center mb-4">
+            <div class="feature-icon col-md-2">
+                <img src="path/to/your/icon1.png" alt="Network Access" class="img-fluid rounded-circle">
+            </div>
+            <div class="feature-content col-md-10">
+                <h3>Access to a Vast Network</h3>
+                <p>Connect with a wide range of healthcare providers and institutions, enhancing collaboration and patient care.</p>
+            </div>
+        </div>
+        
+        <div class="feature row align-items-center mb-4">
+            <div class="feature-icon col-md-2">
+                <img src="path/to/your/icon2.png" alt="Data Sharing" class="img-fluid rounded-circle">
+            </div>
+            <div class="feature-content col-md-10">
+                <h3>Streamlined Data Sharing</h3>
+                <p>Efficiently share patient data across the network, ensuring timely and accurate information exchange.</p>
+            </div>
+        </div>
+        
+        <div class="feature row align-items-center mb-4">
+            <div class="feature-icon col-md-2">
+                <img src="path/to/your/icon3.png" alt="Care Coordination" class="img-fluid rounded-circle">
+            </div>
+            <div class="feature-content col-md-10">
+                <h3>Enhanced Care Coordination</h3>
+                <p>Improve patient outcomes through coordinated care efforts and seamless communication between providers.</p>
+            </div>
+        </div>
+        
+        <div class="feature row align-items-center mb-4">
+            <div class="feature-icon col-md-2">
+                <img src="path/to/your/icon4.png" alt="Healthcare Outcomes" class="img-fluid rounded-circle">
+            </div>
+            <div class="feature-content col-md-10">
+                <h3>Improved Healthcare Outcomes</h3>
+                <p>Leverage data and analytics to drive better healthcare decisions and improve overall patient health.</p>
+            </div>
+        </div>
+        
+        <div class="feature row align-items-center mb-4">
+            <div class="feature-icon col-md-2">
+                <img src="path/to/your/icon5.png" alt="Resources and Support" class="img-fluid rounded-circle">
+            </div>
+            <div class="feature-content col-md-10">
+                <h3>Exclusive Resources and Support</h3>
+                <p>Gain access to exclusive resources, training, and support to help your institution thrive.</p>
+            </div>
+        </div>
+        
+            <a href="/hospital/signup">
+                <button id="register-link" class="btn btn-success">Register a Hospital</button>
+            </a>
+        </div>
+</section>
+
+
+{% endblock %}

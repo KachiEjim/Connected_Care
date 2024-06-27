@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
             body: JSON.stringify({
                 email: email,
                 password: password,
-                user: 'patient',
+                user: 'hospital',
                 opp: 'signup'
             })
         });
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         errorElements.forEach(element => element.remove());
 
         // Validate each field
-        const fields = ['first_name', 'last_name', 'birthday', 'gender', 'country', 'email', 'password', 'confirm_password'];
+        const fields = ['name','address','email', 'password', 'confirm_password', ];
         fields.forEach(field => {
             const input = document.getElementById(field);
             if (!input.value || (input.type === 'select-one' && input.value === 'Default')) {
@@ -109,10 +109,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (isValid) {
             // Perform the additional check before submitting the form
+            const email1 = document.getElementById('email');
             validateUser(email.value, password.value).then(response => {
                 if (response.email) {
                     // Display the login page link
-                    errorMessage.innerHTML = `Email already exists. <a href="${baseURL}:5000/patient/login">Login here</a>`;
+                    showError(email1, 'Email already exists, Login');
+                    errorMessage.innerHTML = `Email already exists. <a href="${baseURL}:5000/hospital/login">Login here</a>`;
                 } else {
                     // Submit the form if all validations pass
                     form.submit();

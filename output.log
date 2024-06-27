@@ -9,184 +9,461 @@ nohup: ignoring input
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 105-827-313
-172.17.0.1 - - [26/Jun/2024 05:58:48] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 05:58:48] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 05:58:48] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 05:58:48] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 05:58:49] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 05:58:49] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 05:58:49] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:01:59] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:01:59] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:01:59] "GET /static/patient_static/scripts/login.js HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:01:59] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:01:59] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:01:59] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:02:00] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:02:56] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:02:56] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:02:56] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:02:56] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:02:56] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:02:56] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:02:56] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:04:49] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:04:49] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:04:49] "GET /static/patient_static/scripts/login.js HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:04:49] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:04:49] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:04:50] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:04:50] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
- * Detected change in '/portfolio_project/Connected_Care/hie_api/v1/views/validation.py', reloading
+172.17.0.1 - - [27/Jun/2024 00:47:42] "[32mPOST /patient/login HTTP/1.1[0m" 302 -
+172.17.0.1 - - [27/Jun/2024 00:47:42] "GET /patient/dashboard HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:47:45] "GET /patient/signup HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:47:45] "[36mGET /static/patient_static/scripts/signup.js HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:47:45] "[36mGET /static/patient_static/css/signup.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:47:45] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:47:45] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:47:45] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:47:46] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:00] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:48:00] "[36mGET /static/landing_page_static/img/intergration1.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:00] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:00] "[36mGET /static/landing_page_static/css/index.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:00] "[36mGET /static/landing_page_static/img/employee.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:00] "[36mGET /static/landing_page_static/js/index.js HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:00] "[36mGET /static/landing_page_static/img/security.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:00] "[36mGET /static/landing_page_static/img/img2.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:00] "[36mGET /static/landing_page_static/img/img3.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:00] "[36mGET /static/landing_page_static/img/whychoseus.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:00] "[36mGET /static/landing_page_static/img/bg.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:00] "[36mGET /static/landing_page_static/img/img1.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:06] "GET /patient/signup HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:48:06] "[36mGET /static/patient_static/scripts/signup.js HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:06] "[36mGET /static/patient_static/css/signup.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:06] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:14] "GET /features HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:48:14] "[33mGET /static/images/data_analytics.png HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 00:48:14] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:14] "[33mGET /static/images/telemedicine.png HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 00:48:14] "[33mGET /static/images/appointment_scheduling.png HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 00:48:14] "[36mGET /static/landing_page_static/img/intergration1.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:14] "[36mGET /static/landing_page_static/img/bg.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:14] "[36mGET /static/landing_page_static/css/features.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:14] "[36mGET /static/landing_page_static/img/security.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:15] "[33mGET /static/images/health_monitoring.png HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 00:48:15] "[33mGET /static/images/patient_education.png HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 00:48:18] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:48:18] "[36mGET /static/landing_page_static/css/index.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:18] "[36mGET /static/landing_page_static/img/intergration1.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:18] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:18] "[36mGET /static/landing_page_static/img/employee.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:18] "[36mGET /static/landing_page_static/js/index.js HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:18] "[36mGET /static/landing_page_static/img/whychoseus.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:18] "[36mGET /static/landing_page_static/img/security.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:18] "[36mGET /static/landing_page_static/img/img1.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:18] "[36mGET /static/landing_page_static/img/img3.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:18] "[36mGET /static/landing_page_static/img/img2.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:20] "GET /about HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:48:20] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:20] "[36mGET /static/landing_page_static/css/about.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:20] "[36mGET /static/landing_page_static/img/bg.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:22] "GET /about HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:48:22] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:22] "[36mGET /static/landing_page_static/css/about.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:25] "GET /hospital/join HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:48:25] "[33mGET /hospital/path/to/your/icon1.png HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 00:48:25] "[33mGET /hospital/path/to/your/icon2.png HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 00:48:25] "[33mGET /hospital/path/to/your/icon3.png HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 00:48:25] "[36mGET /static/hospital_static/scripts/signup.js HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:25] "[33mGET /hospital/path/to/your/icon4.png HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 00:48:25] "[36mGET /static/hospital_static/css/join.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:25] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:25] "[33mGET /hospital/path/to/your/icon5.png HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 00:48:25] "[36mGET /static/landing_page_static/img/bg.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:48:29] "GET /contact HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:51:49] "GET /hospital/signup HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:51:49] "[36mGET /static/hospital_static/scripts/signup.js HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:51:49] "[36mGET /static/hospital_static/css/signup.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:51:49] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:51:49] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:51:49] "[36mGET /static/landing_page_static/img/bg.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 00:52:10] "GET /hospital/login HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:52:10] "GET /static/landing_page_static/css/style.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:52:10] "GET /static/hospital_static/css/login.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:52:10] "GET /static/hospital_static/scripts/login.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:52:12] "GET /static/landing_page_static/img/bg.jpg HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:52:12] "GET /static/patient_static/img/bgnav.png HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:52:13] "GET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:52:23] "[32mPOST /hospital/login HTTP/1.1[0m" 302 -
+172.17.0.1 - - [27/Jun/2024 00:52:23] "GET /hospital/dashboard HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 00:52:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 01:18:20] "[32mPOST /hospital/login HTTP/1.1[0m" 302 -
+172.17.0.1 - - [27/Jun/2024 01:18:20] "GET /hospital/dashboard HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 01:18:47] "GET /patient/login HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 01:18:47] "GET /static/patient_static/css/login.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 01:18:47] "GET /static/patient_static/scripts/login.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 01:18:47] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 01:18:48] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 01:18:48] "GET /static/patient_static/img/bg.jpg HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 01:19:39] "GET /patient/signup HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 01:19:39] "[36mGET /static/patient_static/scripts/signup.js HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 01:19:39] "[36mGET /static/patient_static/css/signup.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 01:19:39] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 01:19:39] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 01:19:39] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
+ * Detected change in '/portfolio_project/Connected_Care/hie_flask/doctory.py', reloading
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 105-827-313
- * Detected change in '/portfolio_project/Connected_Care/hie_api/v1/views/validation.py', reloading
+ * Detected change in '/portfolio_project/Connected_Care/hie_flask/doctory.py', reloading
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 105-827-313
-172.17.0.1 - - [26/Jun/2024 06:09:34] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:09:34] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:09:34] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:09:34] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:09:35] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:09:35] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:09:35] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
- * Detected change in '/portfolio_project/Connected_Care/hie_api/v1/views/validation.py', reloading
+ * Detected change in '/portfolio_project/Connected_Care/hie_flask/doctory.py', reloading
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 105-827-313
-172.17.0.1 - - [26/Jun/2024 06:11:58] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:11:58] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:11:58] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:11:58] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:11:58] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:11:58] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:11:58] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:12:23] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:12:24] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:12:24] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:12:24] "GET /static/patient_static/scripts/login.js HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:12:24] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:12:26] "POST /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:12:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-172.17.0.1 - - [26/Jun/2024 06:12:31] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:18:07] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:18:07] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:18:07] "GET /static/patient_static/scripts/login.js HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:18:07] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:18:07] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:18:07] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:18:07] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:18:42] "POST /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:18:46] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:20:18] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:20:18] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:20:18] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:20:18] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:20:18] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:20:18] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:20:19] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:12] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:22:12] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:12] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:12] "GET /static/patient_static/css/login.css HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:22:12] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:12] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:12] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:14] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:22:14] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:14] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:14] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:14] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:20] "GET /patient/signup HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:22:20] "[36mGET /static/patient_static/css/signup.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:20] "[36mGET /static/patient_static/scripts/signup.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:20] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:20] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:20] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:25] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:22:25] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:25] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:25] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:30] "GET /patient/signup HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:22:30] "[36mGET /static/patient_static/scripts/signup.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:30] "[36mGET /static/patient_static/css/signup.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:30] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:34] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:22:34] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:34] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:34] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:54] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:22:54] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:54] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:54] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:54] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:22:59] "POST /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:23:02] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:25:24] "GET / HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:25:24] "[36mGET /static/landing_page_static/img/intergration1.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:24] "[36mGET /static/landing_page_static/css/index.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:24] "[36mGET /static/landing_page_static/img/employee.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:24] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:24] "[36mGET /static/landing_page_static/js/index.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:24] "[36mGET /static/landing_page_static/img/security.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:24] "[36mGET /static/landing_page_static/img/whychoseus.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:24] "[36mGET /static/landing_page_static/img/img1.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:24] "[36mGET /static/landing_page_static/img/img3.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:24] "[36mGET /static/landing_page_static/img/img2.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:24] "[36mGET /static/landing_page_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:38] "GET /patient/signup HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:25:38] "[36mGET /static/patient_static/scripts/signup.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:38] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:38] "[36mGET /static/patient_static/css/signup.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:43] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:25:43] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:43] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:43] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:25:48] "POST /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:25:52] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:36:08] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:36:08] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:36:08] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:36:08] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:36:08] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:36:08] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:36:09] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:36:11] "POST /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:36:11] "[33mGET /patient/styles.css HTTP/1.1[0m" 404 -
-172.17.0.1 - - [26/Jun/2024 06:39:43] "POST /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:39:43] "[33mGET /patient/styles.css HTTP/1.1[0m" 404 -
-172.17.0.1 - - [26/Jun/2024 06:40:04] "POST /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:40:04] "[33mGET /patient/styles.css HTTP/1.1[0m" 404 -
-172.17.0.1 - - [26/Jun/2024 06:42:44] "POST /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:43:07] "POST /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:58:18] "POST /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:58:30] "GET /t HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:58:30] "[36mGET /static/patient_static/scripts/signup.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:58:30] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:58:30] "[36mGET /static/patient_static/css/signup.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:58:30] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:58:30] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:58:30] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:58:35] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:58:35] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:58:35] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:58:35] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:58:35] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:58:35] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:58:40] "GET /patient/signup HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 06:58:40] "[36mGET /static/patient_static/scripts/signup.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:58:40] "[36mGET /static/patient_static/css/signup.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 06:58:40] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 07:02:29] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 07:02:29] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 07:02:29] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 07:02:29] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 07:02:29] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 07:02:29] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 07:03:21] "GET /patient/login HTTP/1.1" 200 -
-172.17.0.1 - - [26/Jun/2024 07:03:21] "[36mGET /static/patient_static/scripts/login.js HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 07:03:21] "[36mGET /static/patient_static/css/login.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 07:03:21] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
-172.17.0.1 - - [26/Jun/2024 07:03:22] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+ * Detected change in '/portfolio_project/Connected_Care/hie_flask/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 105-827-313
+172.17.0.1 - - [27/Jun/2024 02:16:03] "GET /patient/signup HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 02:16:03] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:16:03] "[36mGET /static/patient_static/css/signup.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:16:03] "[36mGET /static/patient_static/scripts/signup.js HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:16:03] "[36mGET /static/patient_static/img/bg.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:16:03] "[36mGET /static/patient_static/img/bgnav.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:16:04] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:16:09] "[35m[1mGET /patient/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/usr/local/lib/python3.8/dist-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/routing/map.py", line 631, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1476, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 765, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 740, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+  File "/portfolio_project/Connected_Care/hie_flask/app.py", line 88, in page_not_found
+    return render_template("404.html", e=e), 404
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+172.17.0.1 - - [27/Jun/2024 02:16:09] "GET /patient/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 02:16:09] "GET /patient/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 02:16:09] "GET /patient/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 02:16:09] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:17:27] "[35m[1mGET /patient/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/usr/local/lib/python3.8/dist-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/routing/map.py", line 631, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1476, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 765, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 740, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+  File "/portfolio_project/Connected_Care/hie_flask/app.py", line 88, in page_not_found
+    return render_template("404.html", e=e), 404
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/portfolio_project/Connected_Care/hie_flask/templates/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/portfolio_project/Connected_Care/hie_flask/templates/base.html", line 51, in top-level template code
+    {% block content %}{% endblock %}
+  File "/portfolio_project/Connected_Care/hie_flask/templates/404.html", line 8, in block 'content'
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Go to Home</a>
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/routing/map.py", line 926, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'landing_page' instead?
+172.17.0.1 - - [27/Jun/2024 02:17:27] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:17:27] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:17:27] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:17:27] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:18:19] "[35m[1mGET /patient/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/usr/local/lib/python3.8/dist-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/routing/map.py", line 631, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1476, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 765, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 740, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+  File "/portfolio_project/Connected_Care/hie_flask/app.py", line 88, in page_not_found
+    return render_template("404.html", e=e), 404
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/portfolio_project/Connected_Care/hie_flask/templates/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/portfolio_project/Connected_Care/hie_flask/templates/base.html", line 51, in top-level template code
+    {% block content %}{% endblock %}
+  File "/portfolio_project/Connected_Care/hie_flask/templates/404.html", line 8, in block 'content'
+    <a href="{{ url_for('landing_page/index') }}" class="btn btn-primary">Go to Home</a>
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/routing/map.py", line 926, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'landing_page/index'. Did you mean 'landing_page' instead?
+172.17.0.1 - - [27/Jun/2024 02:18:19] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:18:19] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:18:20] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:18:20] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:18:42] "[35m[1mGET /patient/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/usr/local/lib/python3.8/dist-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/routing/map.py", line 631, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1476, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 765, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 740, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+  File "/portfolio_project/Connected_Care/hie_flask/app.py", line 88, in page_not_found
+    return render_template("404.html", e=e), 404
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/portfolio_project/Connected_Care/hie_flask/templates/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/portfolio_project/Connected_Care/hie_flask/templates/base.html", line 51, in top-level template code
+    {% block content %}{% endblock %}
+  File "/portfolio_project/Connected_Care/hie_flask/templates/404.html", line 8, in block 'content'
+    <a href="{{ url_for('landing_page/') }}" class="btn btn-primary">Go to Home</a>
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/routing/map.py", line 926, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'landing_page/'. Did you mean 'landing_page' instead?
+172.17.0.1 - - [27/Jun/2024 02:18:42] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:18:42] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:18:42] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:18:42] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:18:45] "[35m[1mGET /patient/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/usr/local/lib/python3.8/dist-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/routing/map.py", line 631, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1476, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 765, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 740, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+  File "/portfolio_project/Connected_Care/hie_flask/app.py", line 88, in page_not_found
+    return render_template("404.html", e=e), 404
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.8/dist-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/portfolio_project/Connected_Care/hie_flask/templates/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/portfolio_project/Connected_Care/hie_flask/templates/base.html", line 51, in top-level template code
+    {% block content %}{% endblock %}
+  File "/portfolio_project/Connected_Care/hie_flask/templates/404.html", line 8, in block 'content'
+    <a href="{{ url_for('landing_page/') }}" class="btn btn-primary">Go to Home</a>
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/routing/map.py", line 926, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'landing_page/'. Did you mean 'landing_page' instead?
+172.17.0.1 - - [27/Jun/2024 02:18:45] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:18:45] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:18:45] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:18:45] "[36mGET /patient/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:22] "[33mGET /patient/ HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:19:22] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:22] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:38] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Jun/2024 02:19:38] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:38] "[36mGET /static/landing_page_static/css/index.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:38] "[36mGET /static/landing_page_static/img/intergration1.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:38] "[36mGET /static/landing_page_static/js/index.js HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:38] "[36mGET /static/landing_page_static/img/employee.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:39] "[36mGET /static/landing_page_static/img/security.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:39] "[36mGET /static/landing_page_static/img/img3.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:39] "[36mGET /static/landing_page_static/img/img1.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:39] "[36mGET /static/landing_page_static/img/whychoseus.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:39] "[36mGET /static/landing_page_static/img/bg.jpg HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:39] "[36mGET /static/landing_page_static/img/img2.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:19:45] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:19:46] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:21:13] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:21:13] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:21:13] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:21:16] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:21:16] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:21:16] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:22:53] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:22:53] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:22:53] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:22:55] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:22:55] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:22:55] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:22:56] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:22:56] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:22:56] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:23:12] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:23:18] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:23:18] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:23:18] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:25:09] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:25:09] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:25:09] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:25:10] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:25:10] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:25:10] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:25:39] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:25:40] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:25:40] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:25:41] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:25:41] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:25:41] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:27:27] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:27:27] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:27:27] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:27:29] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:27:29] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:27:29] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:27:30] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:27:30] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:27:30] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:27:30] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:27:30] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:27:30] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:27:30] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:27:30] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:27:31] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:27:31] "[33mGET /kk HTTP/1.1[0m" 404 -
+172.17.0.1 - - [27/Jun/2024 02:27:31] "[36mGET /static/landing_page_static/css/style.css HTTP/1.1[0m" 304 -
+172.17.0.1 - - [27/Jun/2024 02:27:31] "[36mGET /static/landing_page_static/favico/favicon-32x32.png HTTP/1.1[0m" 304 -
