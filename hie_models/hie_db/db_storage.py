@@ -129,7 +129,7 @@ class DBStorage:
         """
         self.__session.add(obj)
 
-    def get(self, cls, id):
+    def get(self, cls, check):
         """
         Returns the object based on the class name and its ID, or
         None if not found
@@ -141,7 +141,9 @@ class DBStorage:
 
         all_cls = hie_models.storage.all(cls)
         for value in all_cls.values():
-            if value.id == id:
+            if check == value.id:
+                return value
+            if check == value.email:
                 return value
 
         return None

@@ -47,10 +47,11 @@ class Doctor(BaseModel, Base):
     firstName = Column(String(255), nullable=False)
     lastName = Column(String(255), nullable=False)
     email = Column(String(255), unique=True)
+    gender = Column(String(50))
     contactNumber = Column(String(50))
     specialty = Column(String(255))
     _password = Column(String(255), nullable=False)
-    users = relationship("Patient", secondary=patients_doctors, backref="doctors")
+    patients = relationship("Patient", secondary=patients_doctors, backref="doctors")
 
     def __init__(self, *args, **kwargs):
         """

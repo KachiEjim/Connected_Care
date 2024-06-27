@@ -17,6 +17,8 @@ doctor_bp = Blueprint("doctor_bp", __name__)
 
 
 def login_required(f):
+    print(f)
+
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if "doctor_id" not in session:

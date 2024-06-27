@@ -1,0 +1,39 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "Validation API"
+  description: "API for validating user credentials for login or signup."
+host: "localhost:5001"
+basePath: "/hie_api/v1"
+schemes:
+  - "http"
+paths:
+  /validate:
+    post:
+      summary: "Validate user credentials"
+      description: "Validates a user's email and password for login or signup."
+      tags:
+        - "Validation"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "User credentials"
+          required: True
+          schema:
+            type: "object"
+            properties:
+              email:
+                type: "string"
+              password:
+                type: "string"
+              user:
+                type: "string"
+              opp:
+                type: "string"
+      responses:
+        200:
+          description: "Validation successful"
+        400:
+          description: "Data Not a JSON or Missing required fields"
+        401:
+          description: "Invalid credentials"

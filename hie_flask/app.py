@@ -3,6 +3,8 @@ from flask import Flask, render_template, request, redirect, url_for, flash, ses
 from hie_models import storage
 from hie_flask.hospital import hospital_bp
 from hie_flask.patient import patient_bp
+from hie_flask.doctor import doctor_bp
+
 from datetime import timedelta
 
 # Initialize the Flask application
@@ -16,6 +18,7 @@ app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=30)
 # Register Blueprints for hospital and patient routes
 app.register_blueprint(patient_bp)
 app.register_blueprint(hospital_bp)
+app.register_blueprint(doctor_bp)
 
 
 @app.before_request
@@ -84,6 +87,11 @@ def contact_page():
 
 
 @app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html", e=e), 404
+
+
+@app.errorhandler(500)
 def page_not_found(e):
     return render_template("404.html", e=e), 404
 

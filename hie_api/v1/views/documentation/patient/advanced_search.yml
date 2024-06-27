@@ -1,0 +1,42 @@
+function:
+  name: calculate_match_score
+  description: >
+    This function calculates a match score for a patient object based on certain search parameters.
+    The match score is determined by comparing the patient's attributes to the search parameters.
+    The score is the count of fields in the patient object that match the corresponding values in the search_params dictionary, ignoring case differences.
+  parameters:
+    - name: patient
+      type: object
+      description: The patient object whose attributes are to be matched against the search parameters.
+    - name: search_params
+      type: dictionary
+      description: >
+        A dictionary where the keys are field names (attributes of the patient object) and the values are the values to be matched.
+  returns:
+    type: integer
+    description: The match score, which is the count of matching fields.
+  example:
+    code: |
+      class Patient:
+          def __init__(self, name, age, city):
+              self.name = name
+              self.age = age
+              self.city = city
+
+      # Example patient object
+      patient = Patient(name="John Doe", age=30, city="New York")
+
+      # Example search parameters
+      search_params = {
+          "name": "john doe",
+          "age": "30",
+          "city": "new york"
+      }
+
+      # Calculate match score
+      match_score = sum(
+          str(getattr(patient, field, "")).lower() == value.lower()
+          for field, value in search_params.items()
+      )
+
+      print(match_score)  # Output: 3

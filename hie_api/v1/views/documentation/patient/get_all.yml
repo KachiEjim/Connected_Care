@@ -1,0 +1,106 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "HIE Patient Data API"
+  description: "API for retrieving patient data based on session details and user roles in the Health Information Exchange (HIE) system."
+host: "localhost:5000"
+basePath: "/api/v1"
+schemes:
+  - "http"
+paths:
+  /patients:
+    get:
+      summary: "Retrieve all patients for a doctor or hospital session"
+      description: "Retrieve all patients associated with the current doctor or hospital session."
+      tags:
+        - "Patients"
+      responses:
+        200:
+          description: "A list of patients"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Patient"
+        400:
+          description: "Not a Valid Doctor/Hospital Session"
+          schema:
+            $ref: "#/definitions/Error"
+  /patients/{id_email}:
+    get:
+      summary: "Retrieve specific patient data"
+      description: "Retrieve data for a specific patient based on the provided ID or email."
+      tags:
+        - "Patients"
+      parameters:
+        - name: "id_email"
+          in: "path"
+          required: true
+          type: "string"
+          description: "The ID or email of the patient"
+      responses:
+        200:
+          description: "Patient data"
+          schema:
+            $ref: "#/definitions/Patient"
+        401:
+          description: "Not a Valid User Session"
+          schema:
+            $ref: "#/definitions/Error"
+        404:
+          description: "User with details {id_email} Not found"
+          schema:
+            $ref: "#/definitions/Error"
+  /patients/{id_email}/{data}:
+    get:
+      summary: "Retrieve specific data field for a patient"
+      description: "Retrieve a specific data field for a patient based on the provided ID or email and data field."
+      tags:
+        - "Patients"
+      parameters:
+        - name: "id_email"
+          in: "path"
+          required: true
+          type: "string"
+          description: "The ID or email of the patient"
+        - name: "data"
+          in: "path"
+          required: true
+          type: "string"
+          description: "Specific data field to retrieve for the patient"
+      responses:
+        200:
+          description: "Specific data field for the patient"
+          schema:
+            type: "object"
+        401:
+          description: "Not a Valid User Session"
+          schema:
+            $ref: "#/definitions/Error"
+        404:
+          description: "{data} for user {id_email}, not found"
+          schema:
+            $ref: "#/definitions/Error"
+definitions:
+  Patient:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+        description: "Unique identifier for the patient"
+      name:
+        type: "string"
+        description: "Name of the patient"
+      email:
+        type: "string"
+        description: "Email of the patient"
+      medical_history:
+        type: "array"
+        items:
+          type: "string"
+        description: "Medical history of the patient"
+  Error:
+    type: "object"
+    properties:
+      error:
+        type: "string"
+        description: "Error message"

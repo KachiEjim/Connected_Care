@@ -1,0 +1,21 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "Logout API"
+  description: "API for logging out a user session."
+host: "localhost:5001"
+basePath: "/hie_api/v1"
+schemes:
+  - "http"
+paths:
+  /logout:
+    post:
+      summary: "Logout user session"
+      description: "Logs out a user session."
+      tags:
+        - "Validation"
+      responses:
+        200:
+          description: "Logout successful"
+        401:
+          description: "User not logged in"
