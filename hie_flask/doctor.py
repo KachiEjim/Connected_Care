@@ -36,8 +36,9 @@ def doctor_signup():
 
         # Check if doctor already exists in database
         email = doctor_data.get("email")
+        if not doctor_data.get("_password", None):
+            return jsonify({"error": "No password"})
         existing_patient = storage.all(Doctor).values()
-
         for doctor in existing_patient:
             if email == getattr(doctor, "email"):
                 flash(

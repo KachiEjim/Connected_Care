@@ -51,6 +51,7 @@ class Doctor(BaseModel, Base):
     contactNumber = Column(String(50))
     specialty = Column(String(255))
     _password = Column(String(255), nullable=False)
+    country = Column(String(50))
     patients = relationship("Patient", secondary=patients_doctors, backref="doctors")
 
     def __init__(self, *args, **kwargs):

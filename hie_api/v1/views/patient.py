@@ -13,7 +13,7 @@ from hie_models.patient import Patient
 from hie_models.doctor import Doctor
 from hie_models.hospital import Hospital
 from hie_api.v1.views.validation import login_required
-from hie_api.app import get_session_details
+from hie_api.v1.views.validation import get_session_details
 
 
 @app_views.route(

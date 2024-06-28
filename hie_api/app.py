@@ -28,24 +28,6 @@ def close_db(error):
     """
     storage.close()
 
-def get_session_details():
-    """
-    Retrieve session details to identify the current user session.
-    
-    Returns:
-        tuple: A tuple containing the session key and session value.
-               If no relevant session key is found, returns (None, None).
-    
-    Example:
-        >>> session['doctor_id'] = '123'
-        >>> get_session_details()
-        ('doctor_id', '123')
-    """
-    for key, value in session.items():
-        if key in ["doctor_id", "hospital_id", "patient_id"]:
-            return key, value
-    return None, None
-
 @app.errorhandler(404)
 def page_not_found(e):
     """

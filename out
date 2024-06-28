@@ -1,0 +1,44 @@
+<function dashboard at 0x7f5ed6205310>
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.0.2:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/portfolio_project/Connected_Care/hie_flask/app.py", line 3, in <module>
+    from hie_models import storage
+  File "/portfolio_project/Connected_Care/hie_models/__init__.py", line 7, in <module>
+    from hie_models.hie_db.db_storage import DBStorage
+  File "/portfolio_project/Connected_Care/hie_models/hie_db/db_storage.py", line 11, in <module>
+    from hie_models.medical_records import MedicalRecords
+  File "/portfolio_project/Connected_Care/hie_models/medical_records.py", line 10, in <module>
+    class MedicalRecords(BaseModel, Base):
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/decl_api.py", line 196, in __init__
+    _as_declarative(reg, cls, dict_)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/decl_base.py", line 244, in _as_declarative
+    return _MapperConfig.setup_mapping(registry, cls, dict_, None, {})
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/decl_base.py", line 325, in setup_mapping
+    return _ClassScanMapperConfig(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/decl_base.py", line 579, in __init__
+    self._early_mapping(mapper_kw)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/decl_base.py", line 366, in _early_mapping
+    self.map(mapper_kw)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/decl_base.py", line 1954, in map
+    mapper_cls(self.cls, self.local_table, **self.mapper_args),
+  File "<string>", line 2, in __init__
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/mapper.py", line 851, in __init__
+    self._configure_properties()
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/mapper.py", line 1815, in _configure_properties
+    self._configure_property(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/mapper.py", line 2171, in _configure_property
+    prop.set_parent(self, init)
+KeyboardInterrupt

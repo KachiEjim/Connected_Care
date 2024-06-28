@@ -13,6 +13,25 @@ from hie_models.hospital import Hospital
 from functools import wraps
 
 
+def get_session_details():
+    """
+    Retrieve session details to identify the current user session.
+
+    Returns:
+        tuple: A tuple containing the session key and session value.
+               If no relevant session key is found, returns (None, None).
+
+    Example:
+        >>> session['doctor_id'] = '123'
+        >>> get_session_details()
+        ('doctor_id', '123')
+    """
+    for key, value in session.items():
+        if key in ["doctor_id", "hospital_id", "patient_id"]:
+            return key, value
+    return None, None
+
+
 def login_required(f):
     """
     Decorator to ensure that the user is logged in.
@@ -77,7 +96,7 @@ def validate():
         password = data.get("password")
         user_type = data.get("user")
         opp = data.get("opp")
-    except Exception:
+    except:
         return make_response(jsonify({"error": "Data Not a JSON"}), 400)
 
     if user_type == "admin":
@@ -106,7 +125,7 @@ def validate():
         for user in existing_users:
             if email == getattr(user, "email"):
                 return make_response(jsonify({"email": True}), 200)
-        return make_response(jsonify({"email": False}), 401)
+        return make_response(jsonify({"email": False}), 200)
 
     if opp == "login":
         for user in existing_users:
@@ -117,12 +136,10 @@ def validate():
                         jsonify({"email": True, "password": True}), 200
                     )
                 else:
-                    return make_response(
-                        jsonify({"email": True, "password": False}), 401
-                    )
-        return make_response(jsonify({"email": False, "password": False}), 401)
+                    return make_response(jsonify({"email": True, "password": False}))
+        return make_response(jsonify({"email": False, "password": False}), 200)
 
-    return make_response(jsonify({"error": "Invalid operation"}), 401)
+    return make_response(jsonify({"error": "Invalid operation"}), 200)
 
 
 @app_views.route("/logout", methods=["POST"], strict_slashes=False)

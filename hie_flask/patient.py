@@ -34,6 +34,8 @@ def patient_signup():
 
         # Check if patient already exists in database
         email = patient_data.get("email")
+        if not patient_data.get("_password", None):
+            return jsonify({"error": "No password"})
         existing_patient = storage.all(Patient).values()
 
         for patient in existing_patient:
