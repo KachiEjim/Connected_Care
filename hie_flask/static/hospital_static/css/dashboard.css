@@ -1,8 +1,168 @@
-/* Existing styles */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 1.75em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand i {
+    margin-right: 10px;
+    font-size: 1.45em;
+}
+
+.nav-link {
+    font-size: 1.25em;
+    margin-right: 15px;
+    transition: color 0.3s, background 0.3s;
+}
+
+.bgp {
+    background-color: #007bff; /* Changed to a more neutral blue */
+}
+
+.nav-link:hover {
+    color: #ffffff !important; /* White text color */
+    background-color: #28a745; /* Green background color */
+    border-radius: 5px;
+}
+
+#navbarNav {
+    font-size: 15px;
+}
+
+/* Hospital Info Section */
+.hospital-info {
+    position: fixed;
+    top: 60px; /* Adjust based on header height */
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 99;
+    border-bottom: 1px solid #ddd;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    white-space: nowrap; /* Prevents wrapping of content */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.hospital-info .info-item {
+    display: inline-block;
+    margin: 0 ;
+}
+
+.hospital-info .info-item strong {
+    color: #007bff;
+    text-transform: uppercase;
+}
+
+.hospital-info .info-item span {
+    color:#28a745;
+    margin-left: 10px;
+    font-size:medium;
+    font-weight:bolder;
+
+}
+.hospital-info .info-item span:hover {
+    color: #ffffff !important; /* White text color */
+    background-color:orangered; /* Green background color */
+    border-radius: 5px;
+}
+
+.hospital-info .info-item p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Fixed Navigation Section */
+.fixed-nav-section {
+    position: fixed;
+    top: 100px; /* Adjust based on header and hospital info height */
+    width: 100%;
+    background-color: #f8f9fa;
+    z-index: 98;
+    border-bottom: 1px solid #ddd;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    white-space: nowrap; /* Prevents wrapping of tabs */
+}
+
+.fixed-nav-section .nav-tabs {
+    justify-content: center;
+    margin-bottom: 0;
+    flex-wrap: nowrap; /* Prevents tabs from wrapping */
+}
+
+.fixed-nav-section .nav-tabs .nav-item {
+    display: inline-block; /* Ensures tabs are inline */
+    text-align: center;
+}
+
+.fixed-nav-section .nav-tabs .nav-link {
+    font-size: 1.25em;
+    padding: 10px 15px;
+    transition: color 0.3s, background 0.3s;
+    display: inline-block; /* Ensures tabs are inline */
+}
+
+.fixed-nav-section .nav-tabs .nav-link:hover {
+    color: #ffffff !important; /* White text color */
+    background-color: #28a745; /* Green background color */
+    border-radius: 5px;
+}
+
+.fixed-nav-section .nav-tabs .nav-link.active {
+    background-color: #28a745; /* Active tab background color */
+    color: white !important; /* Active tab text color */
+}
+
+/* Dashboard Section */
+.dashboard-section {
+    margin-top: 160px; /* Adjust based on header, hospital info, and fixed nav height */
+    background-image: url(../../landing_page_static/img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Row and Column Styles */
 .row {
     display: flex;
     flex-wrap: nowrap; /* Prevents boxes from wrapping to the next line */
 }
+
+.row > .col {
+    background-color: #4bb1e0;
+    color: #f9f9f9;
+    padding: 10px;
+    text-align: center;
+}
+
+.col {
+    border-right: 1px solid #000000;
+}
+
+.col:hover {
+    background-color: #000000;
+    border-style: double;
+    color: #ffffff; /* Ensure text is visible on hover */
+}
+
+/* Box Styles */
 .box {
     flex: 1; /* Distributes space equally among the boxes */
     min-width: 100px; /* Ensures boxes do not become too small */
@@ -13,114 +173,36 @@
     margin-bottom: 100px;
     width: 100%;
 }
-header {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 100;
-    width: 100%;
-}
-.row > .col {
-    background-color: #4bb1e0;
-    color: #f9f9f9;
-    padding: 10px;
-    text-align: center;
-}
-.col {
-    border-right: 1px solid #000000;
-}
-.col:hover {
-    background-color: #000000;
-    border-style: double;
-    color: #ffffff; /* Ensure text is visible on hover */
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
-#navbarNav {
-    font-size: 15px;
-}
-.navbar-brand {
-    font-size: 1.75em;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-.navbar-brand i {
-    margin-right: 10px;
-    font-size: 1.45em;
-}
-.nav-link {
-    font-size: 1.25em;
-    margin-right: 15px;
-    transition: color 0.3s, background 0.3s;
-}
-.bgp {
-    background-color: #007bff; /* Changed to a more neutral blue */
-}
-.nav-link:hover {
-    color: #ffffff !important; /* White text color */
-    background-color: #28a745; /* Green background color */
-    border-radius: 5px;
-}
-.head {
-    color: rgba(231, 225, 225, 0.966);
-}
-@media (max-width: 480px) {
-    .overview{
-        margin-left: 340px;
-    }
-}
-@media (min-width: 480px) and (max-width: 768px) {
-    .overview{
-        margin-left: 300px;
-    }
-}
-/* New styles */
-.fixed-nav-section {
-    position: fixed;
-    top: 60px; /* Adjust based on header height */
-    width: 100%;
-    background-color: #f8f9fa;
-    z-index: 99;
-    border-bottom: 1px solid #ddd;
-    overflow-x: auto; /* Allows horizontal scrolling */
-    white-space: nowrap; /* Prevents wrapping of tabs */
-}
-.fixed-nav-section .nav-tabs {
-    justify-content: center;
-    margin-bottom: 0;
-    flex-wrap: nowrap; /* Prevents tabs from wrapping */
-}
-.fixed-nav-section .nav-tabs .nav-item {
-    display: inline-block; /* Ensures tabs are inline */
-    text-align: center;
-}
-.fixed-nav-section .nav-tabs .nav-link {
-    font-size: 1.25em;
-    padding: 10px 15px;
-    transition: color 0.3s, background 0.3s;
-    display: inline-block; /* Ensures tabs are inline */
-}
-.fixed-nav-section .nav-tabs .nav-link:hover {
-    color: #ffffff !important; /* White text color */
-    background-color: #28a745; /* Green background color */
-    border-radius: 5px;
-}
-.fixed-nav-section .nav-tabs .nav-link.active {
-    background-color: #28a745; /* Active tab background color */
-    color: white !important; /* Active tab text color */
-}
-.dashboard-section {
-    margin-top: 120px; /* Adjust based on header and fixed nav height */
-}
 
+/* Map Container */
 .map-container {
     margin: 20px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .overview {
+        margin-left: 340px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .overview {
+        margin-left: 300px;
+    }
+}
+
+/* Additional Styles */
+.head {
+    color: rgba(231, 225, 225, 0.966);
+}
+
+@media (min-width: 480px) and (max-width: 1100px) {
+    .fixed-nav-section {
+        margin-top: 10PX;
+    }
+
 }
