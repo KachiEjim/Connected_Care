@@ -155,6 +155,7 @@ def hospital_logout():
 
 
 @hospital_bp.route("/hospital/dashboard")
+@login_required
 def dashboard():
     """
     Route: /hospital/dashboard
@@ -166,13 +167,12 @@ def dashboard():
         render_template: HTML template for the hospital dashboard.
     """
     hospital_id = session.get("hospital_id")
-    """if not hospital_id:
+    if not hospital_id:
         return jsonify({"error": "No hospital_id in session"}), 400
-"""
     # Retrieve the hospital with the specific hospital_id from storage
     hospital = storage.get(Hospital, hospital_id)
 
     # Convert hospital to dictionary
     """    hospital_dict = hospital.to_dict()
     """
-    return render_template("hospital_html/dashboard.html")
+    return render_template("hospital_html/dashboard.html", hospital=hospital)

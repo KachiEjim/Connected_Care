@@ -89,17 +89,19 @@ def patient_logout():
     return redirect(url_for("patient_bp.patient_login"))
 
 
+"""@login_required"""
+
+
 @patient_bp.route("/patient/dashboard")
-@login_required
 def dashboard():
     patient_id = session.get("patient_id")
-    if not patient_id:
-        return jsonify({"error": "No patient_id in session"}), 400
+    """if not patient_id:
+        return jsonify({"error": "No patient_id in session"}), 400"""
 
     # Retrieve the patient with the specific patient_id from storage
-    patient = storage.get(Patient, patient_id)
+    """patient = storage.get(Patient, patient_id)
 
     # Convert patient to dictionary
-    patient_dict = patient.to_dict()
+    patient_dict = patient.to_dict()"""
 
-    return render_template("patient_html/dashboard.html", patiemt=patient_dict)
+    return render_template("patient_html/dashboard.html", patiemt="patient_dict")
