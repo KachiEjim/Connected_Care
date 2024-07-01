@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('signupForm');
     const errorMessage = document.getElementById('error-message');
-    const baseURL = 'http://192.168.173.212';
+    const baseURL = 'http://192.168.202.212';
 
         // Function to show error message
     function showError(input, message) {

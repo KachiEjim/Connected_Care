@@ -473,7 +473,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .card {
                 margin-bottom: 20px;
                 transition: transform 0.3s, box-shadow 0.3s;
-                margin-top: 20px;
+                margin-top: 30px;
             }
             .card:hover {
                 transform: translateY(-10px);

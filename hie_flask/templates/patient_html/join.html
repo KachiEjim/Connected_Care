@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='patient_static/css/join.css') }}">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap JS and dependencies -->
+    <script src="{{ url_for('static', filename='patient_static/scripts/signup.js') }}"></script>
+{% endblock %}
+
+{% block title %}ConCare - Join Us{% endblock %}
+
+{% block nav%}
+
+<nav class="bgp navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <i class="fas fa-hospital-alt"></i> CONNECTED CARE
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/patient/login">Join Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<section class="features-section">
+    <div class="container">
+        <a href="/patient/signup" id="register-link" class="btn btn-primary mb-4">Join as a Patient</a>
+        <div class="head">
+            <h2>Why Join Connected Care?</h2>
+            <p>Discover the amazing benefits of being part of our healthcare family:</p>
+        </div>
+        <div class="feature row align-items-center mb-4">
+            <div class="feature-icon col-md-2">
+                <img src="path/to/your/icon1.png" alt="Personalized Care" class="img-fluid rounded-circle">
+            </div>
+            <div class="feature-content col-md-10">
+                <h3>Personalized Care</h3>
+                <p>Get healthcare that's tailored just for you. It's like having a personal health concierge!</p>
+            </div>
+        </div>
+        
+        <div class="feature row align-items-center mb-4">
+            <div class="feature-icon col-md-2">
+                <img src="path/to/your/icon2.png" alt="24/7 Access" class="img-fluid rounded-circle">
+            </div>
+            <div class="feature-content col-md-10">
+                <h3>24/7 Access</h3>
+                <p>Access your health information anytime, anywhere. Because your health doesn't take a break!</p>
+            </div>
+        </div>
+        
+        <div class="feature row align-items-center mb-4">
+            <div class="feature-icon col-md-2">
+                <img src="path/to/your/icon3.png" alt="Seamless Communication" class="img-fluid rounded-circle">
+            </div>
+            <div class="feature-content col-md-10">
+                <h3>Seamless Communication</h3>
+                <p>Stay connected with your healthcare team. No more playing phone tag with your doctor!</p>
+            </div>
+        </div>
+        
+        <div class="feature row align-items-center mb-4">
+            <div class="feature-icon col-md-2">
+                <img src="path/to/your/icon4.png" alt="Health Insights" class="img-fluid rounded-circle">
+            </div>
+            <div class="feature-content col-md-10">
+                <h3>Health Insights</h3>
+                <p>Get valuable insights into your health. It's like having a crystal ball for your well-being!</p>
+            </div>
+        </div>
+        
+        <div class="feature row align-items-center mb-4">
+            <div class="feature-icon col-md-2">
+                <img src="path/to/your/icon5.png" alt="Exclusive Resources" class="img-fluid rounded-circle">
+            </div>
+            <div class="feature-content col-md-10">
+                <h3>Exclusive Resources</h3>
+                <p>Access a treasure trove of health resources. Because knowledge is power!</p>
+            </div>
+        </div>
+        
+        <a href="/patient/signup">
+            <button id="register-link" class="btn btn-success">Join as a Patient</button>
+        </a>
+    </div>
+</section>
+{% endblock %}

@@ -1,90 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="doctor.css">
-</head>
-<body>
-    <h1>Doctor Dashboard</h1>
+{% extends "base.html" %}
+
+{% block extra_css %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='doctor_static/css/dashboard.css') }}">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap JS and dependencies -->
+    <script src="{{ url_for('static', filename='doctor_static/scripts/dashboard.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+
+{% block title %}ConCare - Doctor Dashboard{% endblock %}
+
+{% block nav %}
+<header>
+<nav class="bgp navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <!--box1-->
-        <div class="box-1">
-            <h3>Quick Search</h3>
-            <form action="">
-                <!--input name-->
-                <div class="input-name">
-                <div>
-                    <label for="name">First Name</label>
-                    <input type="text" name="name" id="first_name">
-                </div>
-                <div>
-                    <label for="name">Last Name</label>
-                    <input type="text" name="name" id="last_name">
-                </div>
-                </div>
-                <!--input age-->
-                <div class="input-age" >
-                    <div>
-                        <input type="text" name="age" id="age" placeholder="Enter your Age">
-                    </div>
-                    <div><button>Search</button></div>
-                </div>
-            </form>
-        </div>
-        <!--box2-->
-        <div class="box-2">
-            <h3>Bookmarked Patients</h3>
-            <div class="box-container">
-                <div>Emeka</div>
-                <div>Emeka</div>
-                <div>Emeka</div>
-                <div>Emeka</div>
-                <!-- <div>Emeka</div>
-                 -->
-            </div>
-    
-            <button>View all Bookmarked</button>
-        </div>
-        <!--box3-->
-        <div class="box-3">
-            <h3>Event Notification</h3>
-            <div class="box3-container">
-                <div>
-                    <h2>Event Date</h2>
-                    <p>05/07/2024</p>
-                    <p>05/07/2024</p>
-                </div>
-
-                <div>
-                    <h2>Event</h2>
-                    <p>Behavioura Health</p>
-                    <p>Behavioura Health</p>
-                </div>
-
-                <div>
-                    <h2>Falculty</h2>
-                    <p>UKHC</p>
-                    <p>UKHC</p>
-                </div>
-
-                <div>
-                <h2>Name</h2>
-                <p>John</p>
-                <p>Paul</p>
-                </div>
-
-                <div>
-                    <h2>Age</h2>
-                    <p>56</p>
-                    <p>76</p>
-                </div>
-
-            </div>
-            <button>View all Notification</button>
+        <a class="navbar-brand" href="/">
+            <i class="fas fa-hospital-alt"></i> CONNECTED CARE
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/doctor/login">Join Us</a></li>
+            </ul>
         </div>
     </div>
-    
-</body>
-</html>
+</nav>
+</header>
+{% endblock %}
+
+{% block content %}
+<section class="doctor-info">
+    <div class="info-item">
+        <p><strong>Doctor Name:</strong> <span>Dr. John Smith</span></p>
+    </div>
+    <div class="info-item">
+        <p><strong>&emsp;&emsp;Specialty:</strong> <span>Cardiology</span></p>
+    </div>
+    <div class="info-item">
+        <p><strong>&emsp;&emsp;Phone:</strong> <span>(123) 456-7890 </span> &emsp;&emsp;<strong>Email:</strong><span> john.smith@example.com</span></p>
+    </div>
+</section>
+
+<section class="fixed-nav-section">
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active overview" href="#" id="overview-tab">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="patients-tab">Patients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="appointments-tab">Appointments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="messages-tab">Messages</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="diagnosis-tab">Make Diagnosis</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="dashboard-section" id="dashboard-content">
+    <!-- Content will be loaded here dynamically -->
+</section>
+{% endblock %}
