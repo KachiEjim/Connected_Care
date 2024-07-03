@@ -45,6 +45,7 @@ def login_required(f):
 
     @wraps(f)
     def decorated_function(*args, **kwargs):
+        print(session)
         if (
             "patient_id" in session
             or "doctor_id" in session
@@ -57,7 +58,7 @@ def login_required(f):
     return decorated_function
 
 
-@app_views.route("/validate", methods=["POST"], strict_slashes=False)
+@app_views.route("/validate", methods=["GET", "POST"], strict_slashes=False)
 @swag_from("documentation/validation/validate.yml", methods=["POST"])
 def validate():
     """
@@ -98,9 +99,8 @@ def validate():
         opp = data.get("opp")
     except:
         return make_response(jsonify({"error": "Data Not a JSON"}), 400)
-
     if user_type == "admin":
-        session["admin_id"] = "CONNECTED_CARE_ADMIN"
+        session["admin_id"] = "ADMIN"
         return jsonify({"success": "Admin successfully added"}), 201
 
     if not user_type:
@@ -132,6 +132,8 @@ def validate():
             if email == getattr(user, "email"):
                 if user.check_password(password):
                     session[f"{user_type}_id"] = user.id
+                    session.modified = True
+                    print(session)
                     return make_response(
                         jsonify({"email": True, "password": True}), 200
                     )
@@ -140,23 +142,3 @@ def validate():
         return make_response(jsonify({"email": False, "password": False}), 200)
 
     return make_response(jsonify({"error": "Invalid operation"}), 200)
-
-
-@app_views.route("/logout", methods=["POST"], strict_slashes=False)
-@swag_from("documentation/validation/logout.yml", methods=["POST"])
-@login_required
-def patient_logout():
-    """
-    Logs out a user session.
-
-    ---
-    tags:
-      - "Validation"
-    responses:
-      200:
-        description: "Logout successful"
-      401:
-        description: "User not logged in"
-    """
-    session.clear()
-    return jsonify({"success": "Logout successful"}), 200

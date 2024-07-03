@@ -13,10 +13,12 @@ from datetime import timedelta
 app = Flask(__name__)
 app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
 app.config["SECRET_KEY"] = "CONNECTED_CARE"
-app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=30)
+app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=30000)
+app.config['SESSION_COOKIE_SAMESITE'] = 'None'
+app.config['SESSION_COOKIE_SECURE'] = True
 
 app.register_blueprint(app_views)
-CORS(app, resources={r"/hie_api/v1/*": {"origins": "*"}})
+CORS(app, supports_credentials=True, resources={r"/hie_api/v1/*": {"origins": "*"}})
 
 @app.teardown_appcontext
 def close_db(error):
@@ -29,28 +31,6 @@ def close_db(error):
     storage.close()
 
 @app.errorhandler(404)
-def page_not_found(e):
-    """
-    Handle 404 errors by returning a JSON response.
-    
-    Args:
-        e (Exception): The exception that caused the 404 error.
-    
-    Returns:
-        Response: A Flask response object containing the error message.
-    """
-    response = jsonify({"error": "Page not found"})
-    return make_response(response, 404)
-
-@app.before_request
-def make_session_permanent():
-    """
-    Set the session to be permanent before each request.
-    This ensures that the session lifetime is extended to the configured duration.
-    """
-    session.permanent = True
-
-@app.errorhandler(404)
 def not_found(error):
     """
     Handle 404 errors with Swagger documentation.
@@ -61,6 +41,20 @@ def not_found(error):
         description: A resource was not found
     """
     return make_response(jsonify({'error': "Not found"}), 404)
+
+@app.before_request
+def make_session_permanent():
+    """
+    Set the session to be permanent before each request.
+    This ensures that the session lifetime is extended to the configured duration.
+    """
+    print(f'Before {session}')
+    session.permanent = True
+
+@app.after_request
+def after(response):
+    print(f'After {session}')
+    return response
 
 app.config['SWAGGER'] = {
     'title': 'CONNECTED CARE Restful API',

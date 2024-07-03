@@ -5,6 +5,7 @@ Contains patient class, blueprint for creating a patient
 
 from hie_models.basemodel import Base, BaseModel
 from sqlalchemy import Column, String, Date
+from datetime import datetime
 
 
 class Patient(BaseModel, Base):
@@ -47,6 +48,8 @@ class Patient(BaseModel, Base):
     state = Column(String(100))
     zipCode = Column(String(20))
     country = Column(String(100))
+    marital_status = Column(String(50))
+    occupation = Column(String(100))
     emergencyContactName = Column(String(255))
     emergencyContactPhone = Column(String(50))
     next_of_kin = Column(String(100))

@@ -12,6 +12,7 @@ from flask import (
 from functools import wraps
 from hie_models import storage
 from hie_models.patient import Patient
+from datetime import datetime
 
 patient_bp = Blueprint("patient_bp", __name__)
 
@@ -32,12 +33,21 @@ def patient_signup():
     if request.method == "POST":
         patient_data = dict(request.form)
 
+        if patient_data.get("dateOfBirth", None):
+            try:
+                # Convert date of birth to datetime object using the '%Y-%m-%d' format
+                patient_data["dateOfBirth"] = datetime.strptime(
+                    patient_data.get("dateOfBirth"), "%Y-%m-%d"
+                ).date()
+            except ValueError:
+                return jsonify({"error": "Invalid date format"}), 400
+
         # Check if patient already exists in database
         email = patient_data.get("email")
         if not patient_data.get("_password", None):
-            return jsonify({"error": "No password"})
-        existing_patient = storage.all(Patient).values()
+            return jsonify({"error": "No password"}), 400
 
+        existing_patient = storage.all(Patient).values()
         for patient in existing_patient:
             if email == getattr(patient, "email"):
                 flash(
@@ -56,7 +66,6 @@ def patient_signup():
             message="Account successfully created, Login",
             user=patient,
         )
-
     else:
         # Display signup page
         return render_template("patient_html/signup.html")
@@ -67,8 +76,11 @@ def patient_login():
     """Displays the login page"""
     if request.method == "POST":
         # Check if patient exists in database
-        email = request.form.get("email")
-        password = request.form.get("_password")
+        try:
+            email = request.form.get("email")
+            password = request.form.get("_password")
+        except Exception:
+            return render_template("patient_html/login.html", message="Invalid input")
         existing_patient = storage.all(Patient).values()
 
         for patient in existing_patient:
@@ -76,9 +88,10 @@ def patient_login():
                 # Check password
                 if patient.check_password(password):
                     session["patient_id"] = getattr(patient, "id")
-                    patient = patient.to_dict()
+                    session.modified = True
                     return redirect(url_for("patient_bp.dashboard"))
-    # If request method is GET
+        flash("Invalid email or password", "error")
+    # If request method is GET or login fails
     return render_template("patient_html/login.html")
 
 
@@ -103,8 +116,49 @@ def dashboard():
 
     # Retrieve the patient with the specific patient_id from storage
     patient = storage.get(Patient, patient_id)
+    if not patient:
+        return jsonify({"error": "Patient not found"}), 404
 
     # Convert patient to dictionary
     patient_dict = patient.to_dict()
 
-    return render_template("patient_html/dashboard.html", patiemt=patient_dict)
+    # Create a datetime object for the current date and time
+    now = datetime.now()
+
+    # Extract the year
+    year = now.year
+    age = "N/A"
+    date_of_birth_str = patient_dict.get("dateOfBirth", None)
+
+    if date_of_birth_str:
+        try:
+            # Convert the date string to a date object if it's a string
+            if isinstance(date_of_birth_str, str):
+                date_of_birth = datetime.strptime(date_of_birth_str, "%Y-%m-%d").date()
+            else:
+                date_of_birth = date_of_birth_str
+            age = year - date_of_birth.year
+        except ValueError:
+            age = "Invalid date format"
+
+    # Ensure default values for other fields
+    name = f'{patient_dict.get("firstName", "")} {patient_dict.get("lastName", "")}'
+    email = patient_dict.get("email", "N/A")
+    phoneNumber = patient_dict.get("phoneNumber", "N/A")
+
+    # Explicitly check for None and set default values if necessary
+    if not name.strip():
+        name = "N/A"
+    if not email:
+        email = "N/A"
+    if not phoneNumber:
+        phoneNumber = "N/A"
+
+    return render_template(
+        "patient_html/dashboard.html",
+        email=email,
+        phoneNumber=phoneNumber,
+        age=age,
+        name=name,
+        patient=patient_dict,
+    )

@@ -56,16 +56,27 @@ def get_patient_data(id_email, data):
         if session_key == "doctor_id":
             doctor = storage.get(Doctor, session_id)
             if doctor:
-                return jsonify(doctor.patients), 200
+                patients_data = []
+                for patient in doctor.patients:
+                    patient_dict = patient.to_dict()
+                    patients_data.append(patient_dict)
+                return jsonify(patients_data), 200
 
         if session_key == "hospital_id":
             hospital = storage.get(Hospital, session_id)
             if hospital:
-                return jsonify(hospital.patients), 200
+                patients_data = []
+                for patient in hospital.patients:
+                    patient_dict = patient.to_dict()
+                    patients_data.append(patient_dict)
+                return jsonify(patients_data), 200
 
         if session_key == "admin":
             patients = storage.all(Patient)
-            return jsonify(list(patients.values())), 200
+            for patient in patients:
+                patient_dict = patient.to_dict()
+                patients_data.append(patient_dict)
+            return jsonify(patients_data), 200
 
     # Handle case where a specific patient ID is provided
     elif id_email is not None:

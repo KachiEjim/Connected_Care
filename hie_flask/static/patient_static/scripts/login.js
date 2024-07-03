@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('signupForm');
     const errorMessage = document.getElementById('error-message');
-    const baseURL = 'http://192.168.202.212';
+    const baseURL = 'http://192.168.0.134';
 
         // Function to show error message
     function showError(input, message) {
@@ -20,7 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
     async function validateUser(email, password) {
         const response = await fetch(`${baseURL}:5001/hie_api/v1/validate`, {
             method: 'POST',
+            credentials: 'include',
             headers: {
+                headers: {
+                'Secure': 'true',
+                'SameSite': 'None',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({

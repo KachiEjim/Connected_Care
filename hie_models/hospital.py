@@ -4,7 +4,7 @@ Contains hospital class, blueprint for creating a hospital
 """
 
 from hie_models.basemodel import Base, BaseModel
-from sqlalchemy import Column, Integer, String, ForeignKey, Table
+from sqlalchemy import Column, Integer, String, ForeignKey, Table, JSON
 from sqlalchemy.orm import relationship
 
 
@@ -49,6 +49,10 @@ class Hospital(BaseModel, Base):
     contactNumber = Column(String(50))
     email = Column(String(100), unique=True)
     _password = Column(String(255), nullable=False)
+    services = Column(JSON)
+    departments = Column(JSON)
+    key_staffs = Column(JSON)
+    recent_achievements = Column(JSON)
     doctors = relationship("Doctor", secondary=doctors_hospitals, backref="hospitals")
     patients = relationship(
         "Patient", secondary=patients_hospitals, backref="hospitals"

@@ -7,6 +7,11 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <script>
+        const patientData = {{ patient | tojson }};
+    </script>
+    
     <!-- Bootstrap JS and dependencies -->
     <script src="{{ url_for('static', filename='patient_static/scripts/dashboard.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -15,6 +20,7 @@
 {% block title %}ConCare - Patient Dashboard{% endblock %}
 
 {% block nav %}
+
 <header>
 <nav class="bgp navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
@@ -41,13 +47,13 @@
 {% block content %}
 <section class="patient-info">
     <div class="info-item">
-        <p><strong>Patient Name:</strong> <span>John Doe</span></p>
+        <p><strong>Patient Name:</strong> <span>{{ name }}</span></p>
     </div>
     <div class="info-item">
-        <p><strong>&emsp;&emsp;Age:</strong> <span>30</span></p>
+        <p><strong>&emsp;&emsp;Age:</strong> <span>{{ age }}</span></p>
     </div>
     <div class="info-item">
-        <p><strong>&emsp;&emsp;Phone:</strong>   <span>(123) 456-7890 </span>   &emsp;&emsp;<strong>Email:</strong><span> john.doe@example.com</span></p>
+        <p><strong>&emsp;&emsp;Phone:</strong> <span>{{ phoneNumber }}</span> &emsp;&emsp;<strong>Email:</strong><span>{{ email }}</span></p>
     </div>
 </section>
 
@@ -73,5 +79,8 @@
 <section class="dashboard-section" id="dashboard-content">
     <!-- Content will be loaded here dynamically -->
 </section>
+
+<!-- Embed the patient data in a script tag -->
+
 
 {% endblock %}
