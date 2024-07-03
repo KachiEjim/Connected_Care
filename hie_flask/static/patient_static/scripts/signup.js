@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('signupForm');
     const errorMessage = document.getElementById('error-message');
-    const baseURL = 'http://52.91.118.78';
+    const baseURL = 'https://concare.kachy.tech';
 
         // Function to show error message
     function showError(input, message) {
