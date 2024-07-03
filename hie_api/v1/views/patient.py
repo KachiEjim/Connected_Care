@@ -92,7 +92,7 @@ def get_patient_data(id_email, data):
         user = storage.get(cls_name, id_email)
         if user is None:
             return jsonify({"error": f"User with details {id_email} Not found"}), 404
-
+        user = user.to_dict()
         if data is not None:
             try:
                 user_value = user[data]
