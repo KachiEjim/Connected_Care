@@ -750,11 +750,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 })
-const baseURL = 'https:/concare.kachy.tech';
 
 async function fetchOverviewData() {
     try {
-        const response = await fetch(`${baseURL}/hie_api/v1/patients/${patientData.id}`, {
+        const response = await fetch(`https:/concare.kachy.tech/hie_api/v1/patients/${patientData.id}`, {
             credentials: 'include',
             headers: {
                 'SameSite': 'None',
