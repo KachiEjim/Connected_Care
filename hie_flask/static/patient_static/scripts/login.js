@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
+                    'Request-Version': 'HTTP/1.1',
+                    'Secure': 'true',
+                    'SameSite': 'None',
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
