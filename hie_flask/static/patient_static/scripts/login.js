@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const response = await fetch(`${baseURL}:5001/hie_api/v1/validate`, {
             method: 'POST',
             credentials: 'include',
-            headers: {
                 headers: {
                 'Secure': 'true',
                 'SameSite': 'None',
