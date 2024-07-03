@@ -60,10 +60,10 @@ class DBStorage:
         - Sets up the engine to connect to the MySQL database.
         - Uses environment variables for user, password, host, and database name.
         """
-        HIE_USER = getenv("HIE_USER", default="root")
-        HIE_PWD = getenv("HIE_PWD", default="root")
+        HIE_USER = getenv("HIE_USER", default="admin")
+        HIE_PWD = getenv("HIE_PWD", default="hie_pwd")
         HIE_HOST = getenv("HIE_HOST", default="localhost")
-        HIE_DB = getenv("HIE_DB", default="hbnb_dev_db")
+        HIE_DB = getenv("HIE_DB", default="hie_db")
         HIE_ENV = getenv("HIE_ENV")
         self.__engine = create_engine(
             "mysql+mysqldb://{}:{}@{}/{}".format(HIE_USER, HIE_PWD, HIE_HOST, HIE_DB)
