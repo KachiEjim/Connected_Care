@@ -753,13 +753,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 async function fetchOverviewData() {
     try {
-        const response = await fetch(`https:/concare.kachy.tech/hie_api/v1/patients/${patientData.id}`, {
+        const response = await fetch(`https://concare.kachy.tech/hie_api/v1/patients/${patientData.id}`, {
             credentials: 'include',
             headers: {
                 'SameSite': 'None',
-
-              }
-        }); 
+            }
+        });
         if (response.ok) {
             return await response.json();
         } else {
