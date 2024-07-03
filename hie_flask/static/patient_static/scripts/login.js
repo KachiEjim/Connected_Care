@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     function validateUser(email, password) {
         return $.ajax({
-            url: `${baseURL}:5001/hie_api/v1/validate`,
+            url: `${baseURL}/hie_api/v1/validate`,
             type: 'POST',
             headers: {
                 'Request-Version': 'HTTP/1.1',

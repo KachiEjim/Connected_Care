@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to validate user by making an asynchronous request
     async function validateUser(email, password) {
-        const response = await fetch(`${baseURL}:5001/hie_api/v1/validate`, {
+        const response = await fetch(`${baseURL}/hie_api/v1/validate`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
