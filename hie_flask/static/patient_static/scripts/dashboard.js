@@ -751,7 +751,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-const baseURL = 'http://192.168.0.134';
+const baseURL = 'http://52.91.118.78';
 
 async function fetchOverviewData() {
     try {

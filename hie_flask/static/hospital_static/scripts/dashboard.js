@@ -895,7 +895,7 @@ function openPatientRegistration() {
     const registrationForm = document.getElementById('registration-form');
     registrationForm.innerHTML = '<p>Loading...</p>'; // Show loading message
 
-    fetch('http://192.168.173.212/patient/signup')
+    fetch('http://52.91.118.78/patient/signup')
         .then(response => response.text())
         .then(data => {
             registrationForm.innerHTML = data;
@@ -920,7 +920,7 @@ function openDoctorRegistration() {
     const registrationForm = document.getElementById('registration-form');
     registrationForm.innerHTML = '<p>Loading...</p>'; // Show loading message
 
-    fetch('http://192.168.173.212/doctor/signup')
+    fetch('http://52.91.118.78/doctor/signup')
         .then(response => response.text())
         .then(data => {
             registrationForm.innerHTML = data;
@@ -950,7 +950,7 @@ function openAppointmentForm() {
     const appointmentForm = document.getElementById('appointment-form');
     appointmentForm.innerHTML = '<p>Loading...</p>'; // Show loading message
 
-    fetch('http://192.168.173.212/appointment/schedule')
+    fetch('http://52.91.118.78/appointment/schedule')
         .then(response => response.text())
         .then(data => {
             appointmentForm.innerHTML = data;
