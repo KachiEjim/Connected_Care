@@ -14,8 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('active');
 
             // Fetch data based on the clicked tab
-            fetch(`${baseURL}:5001/hie_api/v1/patients/${patientData.id}`);
-            print(response)
+
             fetchData(tabId);
         });
     });
@@ -755,7 +754,7 @@ const baseURL = 'https://52.91.118.78';
 
 async function fetchOverviewData() {
     try {
-        const response = await fetch(`${baseURL}:5001/hie_api/v1/patients/${patientData.id}`, {
+        const response = await fetch(`${baseURL}/hie_api/v1/patients/${patientData.id}`, {
             credentials: 'include',
             headers: {
                 'SameSite': 'None',

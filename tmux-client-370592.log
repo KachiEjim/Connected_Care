@@ -1,0 +1,46 @@
+1719997793.373426 client started (370592): version 3.0a, socket /tmp/tmux-0/default, protocol 8
+1719997793.373453 on Linux 5.15.0-1021-aws #25~20.04.1-Ubuntu SMP Thu Sep 22 13:59:08 UTC 2022; libevent 2.1.11-stable (poll)
+1719997793.373470 socket is /tmp/tmux-0/default
+1719997793.373481 trying connect
+1719997793.373495 connect failed: Connection refused
+1719997793.373503 lock file is /tmp/tmux-0/default.lock
+1719997793.373526 flock succeeded
+1719997793.373530 got lock (6)
+1719997793.373537 trying connect
+1719997793.373544 connect failed: Connection refused
+1719997793.373757 add peer 0x55a22d58f320: 7 ((nil))
+1719997793.373888 sending message 100 to peer 0x55a22d58f320 (4 bytes)
+1719997793.373896 sending message 101 to peer 0x55a22d58f320 (15 bytes)
+1719997793.373900 sending message 102 to peer 0x55a22d58f320 (11 bytes)
+1719997793.373903 sending message 108 to peer 0x55a22d58f320 (28 bytes)
+1719997793.373908 sending message 104 to peer 0x55a22d58f320 (0 bytes)
+1719997793.373912 sending message 107 to peer 0x55a22d58f320 (4 bytes)
+1719997793.373916 sending message 105 to peer 0x55a22d58f320 (16 bytes)
+1719997793.373920 sending message 105 to peer 0x55a22d58f320 (14 bytes)
+1719997793.373924 sending message 105 to peer 0x55a22d58f320 (25 bytes)
+1719997793.373928 sending message 105 to peer 0x55a22d58f320 (17 bytes)
+1719997793.373931 sending message 105 to peer 0x55a22d58f320 (32 bytes)
+1719997793.373935 sending message 105 to peer 0x55a22d58f320 (13 bytes)
+1719997793.373939 sending message 105 to peer 0x55a22d58f320 (11 bytes)
+1719997793.373943 sending message 105 to peer 0x55a22d58f320 (13 bytes)
+1719997793.373947 sending message 105 to peer 0x55a22d58f320 (1506 bytes)
+1719997793.373955 sending message 105 to peer 0x55a22d58f320 (34 bytes)
+1719997793.373959 sending message 105 to peer 0x55a22d58f320 (20 bytes)
+1719997793.373963 sending message 105 to peer 0x55a22d58f320 (32 bytes)
+1719997793.373967 sending message 105 to peer 0x55a22d58f320 (10 bytes)
+1719997793.373971 sending message 105 to peer 0x55a22d58f320 (8 bytes)
+1719997793.373975 sending message 105 to peer 0x55a22d58f320 (104 bytes)
+1719997793.373979 sending message 105 to peer 0x55a22d58f320 (14 bytes)
+1719997793.373982 sending message 105 to peer 0x55a22d58f320 (20 bytes)
+1719997793.373986 sending message 105 to peer 0x55a22d58f320 (16 bytes)
+1719997793.373990 sending message 105 to peer 0x55a22d58f320 (20 bytes)
+1719997793.373993 sending message 106 to peer 0x55a22d58f320 (0 bytes)
+1719997793.373998 cmd_pack_argv: argv[0]=new-session
+1719997793.374001 cmd_pack_argv: argv[1]=-d
+1719997793.374005 cmd_pack_argv: argv[2]=-s
+1719997793.374008 cmd_pack_argv: argv[3]=mysession
+1719997793.374012 cmd_pack_argv: argv[4]=gunicorn --bind 0.0.0.0:5000 hie_flask.app:app
+1719997793.374016 sending message 200 to peer 0x55a22d58f320 (79 bytes)
+1719997793.374020 client loop enter
+1719997793.419800 peer 0x55a22d58f320 message 203
+1719997793.419808 client loop exit

@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         async function validateUser(email, password) {
-            const response = await fetch(`${baseURL}:5001/hie_api/v1/validate`, {
+            const response = await fetch(`${baseURL}/hie_api/v1/validate`, {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-
         return response.json();
     }
     form.addEventListener('submit', function(event) {
@@ -84,6 +83,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+<<<<<<< HEAD
 
 
 });
+=======
+});
+>>>>>>> 28434e3fac597297c7476ae7b2b81764b84cdcb5
