@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return response.json();
     }
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', function (event) {
         event.preventDefault();
         let isValid = true;
         errorMessage.innerHTML = '';
@@ -83,10 +83,5 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
-<<<<<<< HEAD
-
-
 });
-=======
-});
->>>>>>> 28434e3fac597297c7476ae7b2b81764b84cdcb5
+
