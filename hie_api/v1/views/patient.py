@@ -99,7 +99,7 @@ def get_patient_data(id_email, data):
             except KeyError:
                 return jsonify({"error": f"{data} for user {id_email}, not found"}), 404
             return jsonify(user_value), 200
-
+        print(user)
         return jsonify(user), 200
 
 
