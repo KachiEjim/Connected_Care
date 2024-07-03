@@ -749,7 +749,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-});hie_api/v1/validate
+})
 const baseURL = 'https:/concare.kachy.tech';
 
 async function fetchOverviewData() {
