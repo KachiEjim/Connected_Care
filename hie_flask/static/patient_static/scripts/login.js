@@ -16,25 +16,22 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-    // Function to validate user by making an asynchronous request
-    async function validateUser(email, password) {
-        const response = await fetch(`${baseURL}:5001/hie_api/v1/validate`, {
-            method: 'POST',
-            credentials: 'include',
+        async function validateUser(email, password) {
+            const response = await fetch(`${baseURL}:5001/hie_api/v1/validate`, {
+                method: 'POST',
+                credentials: 'include',
                 headers: {
-                'Secure': 'true',
-                'SameSite': 'None',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email: email,
-                password: password,
-                user: 'patient',
-                opp: 'login'
-
-            })
-            
-        });
+                    'Secure': 'true',
+                    'SameSite': 'None',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password,
+                    user: 'patient',
+                    opp: 'login'
+                })
+            });
 
         if (!response.ok) {
             throw new Error('Network response was not ok');
