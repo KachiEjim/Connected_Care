@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (overviewData) {
                     // Assign data to variables
                     pictureUrl = overviewData.pictureUrl || 'default-picture-url';
-                    name = overviewData.name || 'N/A';
-                    age = overviewData.age || 'N/A';
+                    name = overviewData.name || name;
+                    age = overviewData.age || age;
                     gender = overviewData.gender || 'N/A';
                     email = overviewData.email || 'N/A';
                     phone = overviewData.phone || 'N/A';
@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     // Handle case where data is not available
                     pictureUrl = 'default-picture-url';
-                    name = 'N/A';
-                    age = 'N/A';
+                    name = name;
+                    age = age;
                     gender = 'N/A';
                     email = 'N/A';
                     phone = 'N/A';
