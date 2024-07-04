@@ -170,15 +170,15 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <div class="card patient-i">
                                     <div class="card-header">Patient Information</div>
                                     <div class="card-body">
-                                        <p><strong>Name:</strong> <span>$Onyedikachi Ejim</span></p>
-                                        <p><strong>Age:</strong> <span>$24</span></p>
-                                        <p><strong>Gender:</strong> <span>$Male</span></p>
+                                        <p><strong>Name:</strong> <span>ONYEDIKACHI EJIM</span></p>
+                                        <p><strong>Age:</strong> <span>24</span></p>
+                                        <p><strong>Gender:</strong> <span>MALE</span></p>
                                         <p><strong>Email:</strong> <span>${email}</span></p>
-                                        <p><strong>Phone:</strong> <span>$08134989187</span></p>
-                                        <p><strong>Address:</strong> <span>$23 MOSES OGD STR TOPLAND</span></p>
-                                        <p><strong>Occupation:</strong> <span>$Software Developer</span></p>
-                                        <p><strong>Marital Status:</strong> <span>$Single</span></p>
-                                        <p><strong>Emergency Contact:</strong> <span>$Sister</span></p>
+                                        <p><strong>Phone:</strong> <span>08134989187</span></p>
+                                        <p><strong>Address:</strong> <span>23 MOSES OGD STR TOPLAND</span></p>
+                                        <p><strong>Occupation:</strong> <span>STUDENT</span></p>
+                                        <p><strong>Marital Status:</strong> <span>$SINGLE</span></p>
+                                        <p><strong>Emergency Contact:</strong> <span>N/A</span></p>
                                     </div>
                                 </div>
                             </div>
