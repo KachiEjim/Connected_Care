@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const namef = {{ name }};
-    const agef = {{ age }};
     const tabs = document.querySelectorAll('.nav-link');
     const dashboardContent = document.getElementById('dashboard-content');
     
