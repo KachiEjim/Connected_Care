@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+
     const tabs = document.querySelectorAll('.nav-link');
     const dashboardContent = document.getElementById('dashboard-content');
     
@@ -45,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (overviewData) {
                     // Assign data to variables
                     pictureUrl = overviewData.pictureUrl || 'default-picture-url';
-                    name = overviewData.name || namef;
-                    age = overviewData.age || agef;
+                    name = overviewData.name || 'N/A';
+                    age = overviewData.age || 'N/A';
                     gender = overviewData.gender || 'N/A';
                     email = overviewData.email || 'N/A';
                     phone = overviewData.phone || 'N/A';
@@ -57,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     // Handle case where data is not available
                     pictureUrl = 'default-picture-url';
-                    name = namef;
-                    age = agef;
+                    name = 'N/A';
+                    age = 'N/A';
                     gender = 'N/A';
                     email = 'N/A';
                     phone = 'N/A';
@@ -169,15 +170,15 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <div class="card patient-i">
                                     <div class="card-header">Patient Information</div>
                                     <div class="card-body">
-                                        <p><strong>Name:</strong> <span>${name}</span></p>
-                                        <p><strong>Age:</strong> <span>${age}</span></p>
-                                        <p><strong>Gender:</strong> <span>${gender}</span></p>
+                                        <p><strong>Name:</strong> <span>$Onyedikachi Ejim</span></p>
+                                        <p><strong>Age:</strong> <span>$24</span></p>
+                                        <p><strong>Gender:</strong> <span>$Male</span></p>
                                         <p><strong>Email:</strong> <span>${email}</span></p>
-                                        <p><strong>Phone:</strong> <span>${phone}</span></p>
-                                        <p><strong>Address:</strong> <span>${address}</span></p>
-                                        <p><strong>Occupation:</strong> <span>${occupation}</span></p>
-                                        <p><strong>Marital Status:</strong> <span>${maritalStatus}</span></p>
-                                        <p><strong>Emergency Contact:</strong> <span>${emergencyContact}</span></p>
+                                        <p><strong>Phone:</strong> <span>$08134989187</span></p>
+                                        <p><strong>Address:</strong> <span>$23 MOSES OGD STR TOPLAND</span></p>
+                                        <p><strong>Occupation:</strong> <span>$Software Developer</span></p>
+                                        <p><strong>Marital Status:</strong> <span>$Single</span></p>
+                                        <p><strong>Emergency Contact:</strong> <span>$Sister</span></p>
                                     </div>
                                 </div>
                             </div>
