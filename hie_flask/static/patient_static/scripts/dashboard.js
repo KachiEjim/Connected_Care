@@ -45,27 +45,27 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (overviewData) {
                     // Assign data to variables
                     pictureUrl = overviewData.pictureUrl || 'default-picture-url';
-                    name = overviewData.name || 'Data not available';
-                    age = overviewData.age || 'Data not available';
-                    gender = overviewData.gender || 'Data not available';
-                    email = overviewData.email || 'Data not available';
-                    phone = overviewData.phone || 'Data not available';
-                    address = overviewData.address || 'Data not available';
-                    occupation = overviewData.occupation || 'Data not available';
-                    maritalStatus = overviewData.maritalStatus || 'Data not available';
-                    emergencyContact = overviewData.emergencyContact || 'Data not available';
+                    name = overviewData.name || 'N/A';
+                    age = overviewData.age || 'N/A';
+                    gender = overviewData.gender || 'N/A';
+                    email = overviewData.email || 'N/A';
+                    phone = overviewData.phone || 'N/A';
+                    address = overviewData.address || 'N/A';
+                    occupation = overviewData.occupation || 'N/A';
+                    maritalStatus = overviewData.maritalStatus || 'N/A';
+                    emergencyContact = overviewData.emergencyContact || 'N/A';
                 } else {
                     // Handle case where data is not available
                     pictureUrl = 'default-picture-url';
-                    name = 'Data not available';
-                    age = 'Data not available';
-                    gender = 'Data not available';
-                    email = 'Data not available';
-                    phone = 'Data not available';
-                    address = 'Data not available';
-                    occupation = 'Data not available';
-                    maritalStatus = 'Data not available';
-                    emergencyContact = 'Data not available';
+                    name = 'N/A';
+                    age = 'N/A';
+                    gender = 'N/A';
+                    email = 'N/A';
+                    phone = 'N/A';
+                    address = 'N/A';
+                    occupation = 'N/A';
+                    maritalStatus = 'N/A';
+                    emergencyContact = 'N/A';
                 }
 
                 // Use variables to populate the content

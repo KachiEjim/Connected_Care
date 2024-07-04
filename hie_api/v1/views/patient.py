@@ -93,6 +93,11 @@ def get_patient_data(id_email, data):
         if user is None:
             return jsonify({"error": f"User with details {id_email} Not found"}), 404
         user = user.to_dict()
+        from datetime import datetime
+
+        if user["dateOfBirth"] and isinstance(user["dateOfBirth"], datetime):
+            user["age"] = user["dateOfBirth"].year
+
         if data is not None:
             try:
                 user_value = user[data]
