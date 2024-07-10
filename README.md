@@ -54,7 +54,7 @@ To set up the project locally, follow these steps:
 7. **Access the application:**
    Open your browser and go to `http://127.0.0.1:8000`.
 
-## Usage
+## 💻 **Usage**
 
 Connected Care offers a user-friendly interface for both patients and healthcare providers. After logging in, users can:
 
@@ -69,7 +69,7 @@ Connected Care offers a user-friendly interface for both patients and healthcare
   - Schedule appointments and manage patient visits.
   - Access detailed analytics and visualizations of patient data.
 
-## Contributing
+## 🤝 **Contributing**
 
 We welcome contributions from the community! To contribute:
 
